@@ -1,0 +1,37 @@
+llm_providers:
+  openrouter:
+    base_url: "https://openrouter.ai/api/v1"
+    default_model: "meta-llama/llama-3.1-8b-instruct"
+    fallback_model: "openai/gpt-4o-mini"
+    temperature: 0.1
+    max_tokens: 2048
+
+  openai:
+    default_model: "gpt-4o-mini"
+    temperature: 0.1
+    max_tokens: 2048
+
+  google:
+    default_model: "gemini-2.5-flash"
+    temperature: 0.1
+    max_tokens: 2048
+
+embeddings:
+  provider: "openai"
+  model: "text-embedding-3-small"
+
+agent_models:
+  market_scout:
+    forecasting_engine: "prophet_lstm_hybrid"
+    llm_summarizer: "meta-llama/llama-3.1-8b-instruct"
+  
+  demand_supply_matcher:
+    vector_search_model: "text-embedding-3-small"
+    reasoning_llm: "meta-llama/llama-3.1-8b-instruct"
+
+  report_synthesizer:
+    llm_model: "meta-llama/llama-3.1-8b-instruct"
+    guardrail_validator: "pydantic"
+
+  guardrail_validation:
+    llm_model: "meta-llama/llama-3.1-8b-instruct"

@@ -1,0 +1,41 @@
+system:
+  name: "ASCA AI - Agricultural Supply Chain Advisory AI"
+  version: "1.0.0"
+  country: "Sri Lanka"
+
+economic_centers:
+  - id: "DAMBULLA"
+    name: "Dambulla Dedicated Economic Centre"
+    location: "Dambulla, Central Province"
+  - id: "THAMBUTHTHEGAMA"
+    name: "Thambuththegama Economic Centre"
+    location: "Thambuththegama, North Central Province"
+
+forecasting:
+  horizon_days: 14
+  models:
+    - prophet
+    - lstm
+  surplus_anomaly_threshold_percentage: 25.0 # Price drops over 25% triggered as surplus anomaly
+
+b2b_matching:
+  fefo_risk_scoring:
+    shelf_life_weight: 0.4
+    surplus_volume_weight: 0.3
+    distance_weight: 0.3
+  vector_db:
+    collection_name: "b2b_buyers"
+    top_k_matches: 5
+
+report_synthesizer:
+  guardrails:
+    pydantic_validation: true
+    hallucination_check: true
+    confidence_threshold: 0.85
+
+notifications:
+  channel: "telegram"
+  auto_broadcast_anomalies: true
+  language_support:
+    - "si" # Sinhala
+    - "en" # English

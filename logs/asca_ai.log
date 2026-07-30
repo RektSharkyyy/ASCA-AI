@@ -1,0 +1,173 @@
+2026-07-29 21:38:03.418 | INFO     | __main__:main:14 - Loaded System Config for: ASCA AI - Agricultural Supply Chain Advisory AI
+2026-07-29 21:38:03.419 | INFO     | __main__:main:15 - Economic Centers: ['DAMBULLA', 'THAMBUTHTHEGAMA']
+2026-07-29 21:38:03.419 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-29 21:38:05.729 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-29 21:38:05.730 | INFO     | __main__:main:17 - SUCCESS: All infrastructure components and database models initialized!
+2026-07-30 10:27:05.890 | INFO     | __main__:main:13 - Testing Guardrail System...
+2026-07-30 10:27:05.891 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 10:27:05.892 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 10:27:05.893 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:27:13.122 | INFO     | __main__:main:13 - Testing Guardrail System...
+2026-07-30 10:27:13.123 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 10:27:13.123 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 10:27:13.123 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:30:52.694 | INFO     | __main__:main:13 - Testing Guardrail System...
+2026-07-30 10:30:52.695 | INFO     | src.agents.guardrail:validate_blueprint_output:117 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 10:30:52.695 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 10:30:52.695 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 10:30:52.695 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:34:22.678 | INFO     | __main__:main:13 - Testing Guardrail System...
+2026-07-30 10:34:22.678 | INFO     | src.agents.guardrail:validate_blueprint_output:117 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 10:34:22.678 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 10:34:22.678 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 10:34:22.679 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:34:44.999 | INFO     | src.agents.guardrail:validate_blueprint_output:117 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 10:45:44.237 | INFO     | __main__:main:18 - Testing Guardrail System & OpenRouter Integration Functions...
+2026-07-30 10:45:44.238 | INFO     | src.agents.guardrail:validate_blueprint_output:118 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 10:45:44.238 | INFO     | __main__:main:54 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 10:45:44.238 | INFO     | __main__:main:55 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 11:18:38.520 | INFO     | __main__:main:18 - Testing Guardrail System & OpenRouter Integration Functions...
+2026-07-30 11:18:38.520 | INFO     | src.agents.guardrail:validate_blueprint_output:118 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 11:18:38.520 | INFO     | __main__:main:54 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 11:18:38.521 | INFO     | __main__:main:55 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 11:21:07.308 | INFO     | src.agents.guardrail:validate_blueprint_output:118 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 11:21:23.539 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:142 - Initiating OpenRouter LLM Call [meta-llama/llama-3.1-8b-instruct] with Pydantic Guardrail Protection...
+2026-07-30 11:21:23.540 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-07-30 11:21:25.579 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:156 - OpenRouter [meta-llama/llama-3.1-8b-instruct] Attempt 1/3...
+2026-07-30 11:21:29.535 | ERROR    | src.agents.guardrail:validate_blueprint_output:125 - Guardrail Validation Failed: 2 validation errors for ExecutiveAdvisoryBlueprint
+title
+  Field required [type=missing, input_value={'executive_summary_sinha...UYER_SAUCE_DAMBULLA'}}]}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+target_centers.0
+  Input should be a valid string [type=string_type, input_value={'name': 'DAMBULLA', 'loc...'BUYER_SAUCE_DAMBULLA'}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-07-30 11:21:29.537 | WARNING  | src.agents.guardrail:generate_validated_blueprint_with_openrouter:166 - Attempt 1 failed validation: ["2 validation errors for ExecutiveAdvisoryBlueprint\ntitle\n  Field required [type=missing, input_value={'executive_summary_sinha...UYER_SAUCE_DAMBULLA'}}]}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\ntarget_centers.0\n  Input should be a valid string [type=string_type, input_value={'name': 'DAMBULLA', 'loc...'BUYER_SAUCE_DAMBULLA'}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"]
+2026-07-30 11:21:29.538 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:156 - OpenRouter [meta-llama/llama-3.1-8b-instruct] Attempt 2/3...
+2026-07-30 11:21:33.496 | ERROR    | src.agents.guardrail:validate_blueprint_output:125 - Guardrail Validation Failed: 1 validation error for ExecutiveAdvisoryBlueprint
+target_centers.0
+  Input should be a valid string [type=string_type, input_value={'name': 'DAMBULLA', 'loc...mbulla Economic Center'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/string_type
+2026-07-30 11:21:33.497 | WARNING  | src.agents.guardrail:generate_validated_blueprint_with_openrouter:166 - Attempt 2 failed validation: ["1 validation error for ExecutiveAdvisoryBlueprint\ntarget_centers.0\n  Input should be a valid string [type=string_type, input_value={'name': 'DAMBULLA', 'loc...mbulla Economic Center'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/string_type"]
+2026-07-30 11:21:33.498 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:156 - OpenRouter [meta-llama/llama-3.1-8b-instruct] Attempt 3/3...
+2026-07-30 11:21:35.902 | ERROR    | src.agents.guardrail:validate_blueprint_output:125 - Guardrail Validation Failed: 2 validation errors for ExecutiveAdvisoryBlueprint
+title
+  Field required [type=missing, input_value={'executive_summary_sinha...ULLA', 'capacity': 30}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+target_centers
+  Field required [type=missing, input_value={'executive_summary_sinha...ULLA', 'capacity': 30}}}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.13/v/missing
+2026-07-30 11:21:35.903 | WARNING  | src.agents.guardrail:generate_validated_blueprint_with_openrouter:166 - Attempt 3 failed validation: ["2 validation errors for ExecutiveAdvisoryBlueprint\ntitle\n  Field required [type=missing, input_value={'executive_summary_sinha...ULLA', 'capacity': 30}}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\ntarget_centers\n  Field required [type=missing, input_value={'executive_summary_sinha...ULLA', 'capacity': 30}}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"]
+2026-07-30 11:23:40.974 | INFO     | __main__:main:18 - Testing Guardrail System & OpenRouter Integration Functions...
+2026-07-30 11:23:40.975 | INFO     | src.agents.guardrail:validate_blueprint_output:162 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 11:23:40.975 | INFO     | __main__:main:54 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
+2026-07-30 11:23:40.975 | INFO     | __main__:main:55 - Validated Title: Dambulla Vegetable Surplus Advisory
+2026-07-30 11:25:08.785 | INFO     | src.agents.guardrail:validate_blueprint_output:162 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 11:25:12.148 | INFO     | src.agents.guardrail:validate_blueprint_output:162 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 11:25:15.306 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:186 - Initiating OpenRouter LLM Call [meta-llama/llama-3.1-8b-instruct] with Pydantic Guardrail Protection...
+2026-07-30 11:25:15.308 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-07-30 11:25:16.525 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:230 - OpenRouter [meta-llama/llama-3.1-8b-instruct] Attempt 1/3...
+2026-07-30 11:25:38.082 | INFO     | src.agents.guardrail:validate_blueprint_output:162 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 11:25:38.085 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:237 - OpenRouter meta-llama/llama-3.1-8b-instruct response passed Guardrail validation 100%!
+2026-07-30 11:47:59.732 | INFO     | __main__:main:18 - Testing Infrastructure & Market Scout Agent Parallel Execution...
+2026-07-30 11:47:59.732 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-30 11:47:59.751 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-30 11:47:59.751 | INFO     | __main__:main:22 - Running MarketScoutAgent async parallel crop analysis...
+2026-07-30 11:47:59.751 | INFO     | src.agents.market_scout:scout_market_parallel_async:130 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-07-30 11:48:05.949 | INFO     | src.agents.market_scout:scout_market_parallel_async:140 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 11:48:05.949 | INFO     | __main__:main:28 - Market Scout returned 4 Insights:
+2026-07-30 11:48:05.950 | INFO     | __main__:main:30 -  - Crop: tomato       | Current: LKR 183.24 | Predicted: LKR 174.53 | Anomaly: False | Risk: LOW
+2026-07-30 11:48:05.950 | INFO     | __main__:main:30 -  - Crop: carrot       | Current: LKR 244.74 | Predicted: LKR 225.18 | Anomaly: False | Risk: LOW
+2026-07-30 11:48:05.950 | INFO     | __main__:main:30 -  - Crop: beans        | Current: LKR 213.86 | Predicted: LKR 195.82 | Anomaly: False | Risk: LOW
+2026-07-30 11:48:05.950 | INFO     | __main__:main:30 -  - Crop: eggplant     | Current: LKR 123.76 | Predicted: LKR 126.77 | Anomaly: False | Risk: LOW
+2026-07-30 12:24:21.151 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-30 12:24:23.195 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-30 12:24:23.196 | INFO     | src.agents.market_scout:scout_market_parallel_async:130 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-07-30 12:24:29.865 | INFO     | src.agents.market_scout:scout_market_parallel_async:140 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:24:35.823 | INFO     | src.agents.market_scout:scout_market_parallel_async:130 - MarketScoutAgent scouting 2 crops concurrently for DAMBULLA...
+2026-07-30 12:24:35.824 | INFO     | src.agents.market_scout:scout_market_parallel_async:130 - MarketScoutAgent scouting 2 crops concurrently for THAMBUTHTHEGAMA...
+2026-07-30 12:24:35.828 | ERROR    | src.agents.market_scout:fetch_historical_data_async:69 - Error fetching DB market data for carrot at THAMBUTHTHEGAMA: This session is provisioning a new connection; concurrent operations are not permitted (Background on this error at: https://sqlalche.me/e/20/isce)
+2026-07-30 12:24:40.956 | INFO     | src.agents.market_scout:scout_market_parallel_async:140 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:24:41.605 | INFO     | src.agents.market_scout:scout_market_parallel_async:140 - MarketScoutAgent completed scouting for THAMBUTHTHEGAMA: Detected 0 surplus anomalies.
+2026-07-30 12:29:05.512 | INFO     | __main__:main:18 - Testing Infrastructure & Market Scout Agent Parallel Execution...
+2026-07-30 12:29:05.513 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-30 12:29:05.523 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-30 12:29:05.523 | INFO     | __main__:main:22 - Running MarketScoutAgent async parallel crop analysis...
+2026-07-30 12:29:05.523 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-07-30 12:29:05.537 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-07-30 12:29:05.540 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-07-30 12:29:05.542 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-07-30 12:29:05.549 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-07-30 12:29:10.737 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:29:10.737 | INFO     | __main__:main:28 - Market Scout returned 4 Insights:
+2026-07-30 12:29:10.738 | INFO     | __main__:main:30 -  - Crop: tomato       | Current: LKR 174.72 | Predicted: LKR 167.11 | Anomaly: False | Risk: LOW
+2026-07-30 12:29:10.738 | INFO     | __main__:main:30 -  - Crop: carrot       | Current: LKR 239.65 | Predicted: LKR 229.69 | Anomaly: False | Risk: LOW
+2026-07-30 12:29:10.738 | INFO     | __main__:main:30 -  - Crop: beans        | Current: LKR 221.08 | Predicted: LKR 197.81 | Anomaly: False | Risk: MEDIUM
+2026-07-30 12:29:10.738 | INFO     | __main__:main:30 -  - Crop: eggplant     | Current: LKR 147.05 | Predicted: LKR 134.84 | Anomaly: False | Risk: LOW
+2026-07-30 12:32:06.551 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-30 12:32:06.559 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-30 12:32:06.571 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:31.933 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-07-30 12:32:31.941 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:31.945 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:31.948 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:31.951 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:35.730 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:35.824 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-07-30 12:32:39.101 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:33:12.475 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 3 crops concurrently for DAMBULLA...
+2026-07-30 12:33:12.476 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 3 crops concurrently for THAMBUTHTHEGAMA...
+2026-07-30 12:33:12.482 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at THAMBUTHTHEGAMA. Using synthetic data.
+2026-07-30 12:33:12.486 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-07-30 12:33:12.489 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-07-30 12:33:12.492 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-07-30 12:33:12.500 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at THAMBUTHTHEGAMA. Using synthetic data.
+2026-07-30 12:33:12.508 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at THAMBUTHTHEGAMA. Using synthetic data.
+2026-07-30 12:33:19.120 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:33:19.126 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for THAMBUTHTHEGAMA: Detected 0 surplus anomalies.
+2026-07-30 12:36:04.927 | INFO     | src.agents.tools.matcher_tool:_ensure_seed_buyers:97 - Seeding initial Sri Lankan B2B Processing Plants into ChromaDB...
+2026-07-30 12:36:34.607 | INFO     | src.agents.tools.matcher_tool:_ensure_seed_buyers:155 - Successfully seeded 4 B2B buyers into ChromaDB.
+2026-07-30 12:36:34.608 | INFO     | __main__:main:15 - Testing Market Scout Agent + Demand Supply Matcher Agent Pipeline...
+2026-07-30 12:36:34.609 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-30 12:36:34.620 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-30 12:36:34.621 | INFO     | __main__:main:19 - Step 1: Running MarketScoutAgent async parallel crop analysis...
+2026-07-30 12:36:34.621 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-07-30 12:36:34.639 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-07-30 12:36:34.648 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-07-30 12:36:34.651 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-07-30 12:36:34.653 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-07-30 12:36:40.114 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:36:40.115 | INFO     | __main__:main:32 - Step 2: Running DemandSupplyMatcherAgent ChromaDB + FEFO matching...
+2026-07-30 12:36:40.115 | INFO     | src.agents.matcher:match_surplus_crops_async:73 - DemandSupplyMatcherAgent matching 1 surplus anomalies concurrently...
+2026-07-30 12:36:40.115 | INFO     | src.agents.matcher:match_single_insight_async:24 - DemandSupplyMatcherAgent finding B2B buyers for tomato surplus at DAMBULLA (59.69 Tons)...
+2026-07-30 12:36:40.618 | INFO     | src.agents.matcher:match_surplus_crops_async:79 - DemandSupplyMatcherAgent generated 3 total B2B Match Recommendations.
+2026-07-30 12:36:40.618 | INFO     | __main__:main:35 - Matcher Agent returned 3 B2B Matches:
+2026-07-30 12:36:40.618 | INFO     | __main__:main:37 -  - Buyer: Lanka Canning & Sauce Ltd      | Crop: tomato     | Volume: 35.0  T | FEFO Score: 0.6
+2026-07-30 12:36:40.618 | INFO     | __main__:main:37 -  - Buyer: Central Province Canning Mills | Crop: tomato     | Volume: 25.0  T | FEFO Score: 0.67
+2026-07-30 12:36:40.618 | INFO     | __main__:main:37 -  - Buyer: Wayamba Food Dehydration Corp  | Crop: tomato     | Volume: 30.0  T | FEFO Score: 0.69
+2026-07-30 12:38:49.951 | INFO     | __main__:main:15 - Testing Market Scout Agent + Demand Supply Matcher Agent Pipeline...
+2026-07-30 12:38:49.951 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-07-30 12:38:49.958 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-07-30 12:38:49.958 | INFO     | __main__:main:19 - Step 1: Running MarketScoutAgent async parallel crop analysis...
+2026-07-30 12:38:49.958 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-07-30 12:38:49.971 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-07-30 12:38:49.985 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-07-30 12:38:49.988 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-07-30 12:38:50.062 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-07-30 12:38:56.100 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-07-30 12:38:56.100 | INFO     | __main__:main:32 - Step 2: Running DemandSupplyMatcherAgent ChromaDB + FEFO matching...
+2026-07-30 12:38:56.101 | INFO     | src.agents.matcher:match_surplus_crops_async:94 - DemandSupplyMatcherAgent matching 1 surplus anomalies concurrently...
+2026-07-30 12:38:56.101 | INFO     | src.agents.matcher:match_single_insight_async:27 - DemandSupplyMatcherAgent finding B2B buyers for tomato surplus at DAMBULLA (52.48 Tons)...
+2026-07-30 12:38:56.580 | INFO     | src.agents.matcher:match_surplus_crops_async:100 - DemandSupplyMatcherAgent generated 2 total B2B Match Recommendations.
+2026-07-30 12:38:56.580 | INFO     | __main__:main:35 - Matcher Agent returned 2 B2B Matches:
+2026-07-30 12:38:56.580 | INFO     | __main__:main:37 -  - Buyer: Lanka Canning & Sauce Ltd      | Crop: tomato     | Volume: 27.479999999999997 T | FEFO Score: 0.53
+2026-07-30 12:38:56.580 | INFO     | __main__:main:37 -  - Buyer: Central Province Canning Mills | Crop: tomato     | Volume: 25.0  T | FEFO Score: 0.67
+2026-07-30 13:03:16.074 | INFO     | src.agents.tools.matcher_tool:_ensure_seed_buyers:97 - Seeding initial Sri Lankan B2B Processing Plants into ChromaDB...
+2026-07-30 13:03:18.571 | INFO     | src.agents.tools.matcher_tool:_ensure_seed_buyers:155 - Successfully seeded 4 B2B buyers into ChromaDB.
+2026-07-30 13:03:25.730 | INFO     | src.agents.matcher:match_surplus_crops_async:94 - DemandSupplyMatcherAgent matching 1 surplus anomalies concurrently...
+2026-07-30 13:03:25.730 | INFO     | src.agents.matcher:match_single_insight_async:27 - DemandSupplyMatcherAgent finding B2B buyers for tomato surplus at DAMBULLA (50.0 Tons)...
+2026-07-30 13:03:26.113 | INFO     | src.agents.matcher:match_surplus_crops_async:100 - DemandSupplyMatcherAgent generated 2 total B2B Match Recommendations.
+2026-07-30 13:04:04.204 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:186 - Initiating OpenRouter LLM Call [meta-llama/llama-3.1-8b-instruct] with Pydantic Guardrail Protection...
+2026-07-30 13:04:04.209 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-07-30 13:04:04.237 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:230 - OpenRouter [meta-llama/llama-3.1-8b-instruct] Attempt 1/3...
+2026-07-30 13:04:24.635 | INFO     | src.agents.guardrail:validate_blueprint_output:162 - Executive Advisory Blueprint successfully validated through Guardrail.
+2026-07-30 13:04:24.636 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:237 - OpenRouter meta-llama/llama-3.1-8b-instruct response passed Guardrail validation 100%!
