@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 # Core Framework & API
 fastapi>=0.110.0
 uvicorn[standard]>=0.28.0
@@ -16,6 +24,9 @@ langchain-openai>=0.1.1
 langchain-google-genai>=1.0.1
 openai>=1.14.0
 
+# Web Search Tool (real-time external information)
+tavily-python>=0.3.3
+
 # ML, Analytics & Time Series Forecasting
 prophet>=1.1.5
 pandas>=2.2.1
@@ -26,7 +37,7 @@ statsmodels>=0.14.1
 # Vector DB & Memory Store
 chromadb>=0.4.24
 
-# Database
+#++++++++++++++++++++++++++++ Database
 sqlalchemy>=2.0.28
 aiosqlite>=0.20.0
 

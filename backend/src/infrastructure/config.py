@@ -17,7 +17,11 @@ class Settings(BaseSettings):
     OPENROUTER_API_KEY: str = Field(default="", env="OPENROUTER_API_KEY")
     OPENAI_API_KEY: str = Field(default="", env="OPENAI_API_KEY")
     GOOGLE_API_KEY: str = Field(default="", env="GOOGLE_API_KEY")
+    GROQ_API_KEY: str = Field(default="", env="GROQ_API_KEY")
     DEFAULT_LLM_PROVIDER: str = Field(default="openrouter", env="DEFAULT_LLM_PROVIDER")
+
+    # Web Search (Tavily) for real-time external information
+    TAVILY_API_KEY: str = Field(default="", env="TAVILY_API_KEY")
 
     TELEGRAM_BOT_TOKEN: str = Field(default="", env="TELEGRAM_BOT_TOKEN")
     TELEGRAM_ADMIN_CHAT_ID: str = Field(default="", env="TELEGRAM_ADMIN_CHAT_ID")

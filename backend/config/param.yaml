@@ -33,6 +33,29 @@ report_synthesizer:
     hallucination_check: true
     confidence_threshold: 0.85
 
+domain_guardrail:
+  enabled: true
+  fail_open: true # Transient LLM failures default to in_scope so users are never locked out
+  keyword_fast_path: true # Skip the LLM call when keyword signals are unambiguous
+  min_in_scope_keyword_hits: 3
+  min_out_of_scope_keyword_hits: 2
+
+query_router:
+  enabled: true
+  fail_open_route: "rag"
+  routes:
+    - "direct" # Greetings, pleasantries, chitchat - no tools invoked
+    - "web_search" # Real-time external info via Tavily
+    - "rag" # Internal market data + domain agents
+
+web_search:
+  enabled: true
+  provider: "tavily"
+  max_results: 5
+  search_depth: "basic" # "basic" for sub-second latency, "advanced" for deeper crawls
+  include_answer: true
+  local_context_anchor: "Sri Lanka" # Appended to FX/tax/fuel queries for regional relevance
+
 notifications:
   channel: "telegram"
   auto_broadcast_anomalies: true

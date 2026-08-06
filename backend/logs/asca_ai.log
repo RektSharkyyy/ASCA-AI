@@ -6,21 +6,21 @@
 2026-07-30 10:27:05.890 | INFO     | __main__:main:13 - Testing Guardrail System...
 2026-07-30 10:27:05.891 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
 2026-07-30 10:27:05.892 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
-2026-07-30 10:27:05.893 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:27:05.893 | INFO     | __main__:main:51 - Validated Telegram Alert: ⚠️ Dambulla tomato surplus risk! 20 tons are directed to sauce producers.
 2026-07-30 10:27:13.122 | INFO     | __main__:main:13 - Testing Guardrail System...
 2026-07-30 10:27:13.123 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
 2026-07-30 10:27:13.123 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
-2026-07-30 10:27:13.123 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:27:13.123 | INFO     | __main__:main:51 - Validated Telegram Alert: ⚠️ Dambulla tomato surplus risk! 20 tons are directed to sauce producers.
 2026-07-30 10:30:52.694 | INFO     | __main__:main:13 - Testing Guardrail System...
 2026-07-30 10:30:52.695 | INFO     | src.agents.guardrail:validate_blueprint_output:117 - Executive Advisory Blueprint successfully validated through Guardrail.
 2026-07-30 10:30:52.695 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
 2026-07-30 10:30:52.695 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
-2026-07-30 10:30:52.695 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:30:52.695 | INFO     | __main__:main:51 - Validated Telegram Alert: ⚠️ Dambulla tomato surplus risk! 20 tons are directed to sauce producers.
 2026-07-30 10:34:22.678 | INFO     | __main__:main:13 - Testing Guardrail System...
 2026-07-30 10:34:22.678 | INFO     | src.agents.guardrail:validate_blueprint_output:117 - Executive Advisory Blueprint successfully validated through Guardrail.
 2026-07-30 10:34:22.678 | INFO     | __main__:main:49 - GUARDRAIL TEST PASSED 100%! Pydantic output validated successfully.
 2026-07-30 10:34:22.678 | INFO     | __main__:main:50 - Validated Title: Dambulla Vegetable Surplus Advisory
-2026-07-30 10:34:22.679 | INFO     | __main__:main:51 - Validated Sinhala Telegram Alert: ⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානමක්! ටොන් 20ක් සෝස් නිෂ්පාදකයින්ට යොමු කෙරේ.
+2026-07-30 10:34:22.679 | INFO     | __main__:main:51 - Validated Telegram Alert: ⚠️ Dambulla tomato surplus risk! 20 tons are directed to sauce producers.
 2026-07-30 10:34:44.999 | INFO     | src.agents.guardrail:validate_blueprint_output:117 - Executive Advisory Blueprint successfully validated through Guardrail.
 2026-07-30 10:45:44.237 | INFO     | __main__:main:18 - Testing Guardrail System & OpenRouter Integration Functions...
 2026-07-30 10:45:44.238 | INFO     | src.agents.guardrail:validate_blueprint_output:118 - Executive Advisory Blueprint successfully validated through Guardrail.
@@ -171,3 +171,188 @@ target_centers
 2026-07-30 13:04:04.237 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:230 - OpenRouter [meta-llama/llama-3.1-8b-instruct] Attempt 1/3...
 2026-07-30 13:04:24.635 | INFO     | src.agents.guardrail:validate_blueprint_output:162 - Executive Advisory Blueprint successfully validated through Guardrail.
 2026-07-30 13:04:24.636 | INFO     | src.agents.guardrail:generate_validated_blueprint_with_openrouter:237 - OpenRouter meta-llama/llama-3.1-8b-instruct response passed Guardrail validation 100%!
+2026-08-06 16:42:49.334 | INFO     | __main__:main:223 - Running Guardrail + Direct Web Search smoke tests...
+
+2026-08-06 16:42:49.334 | INFO     | __main__:test_guardrail_classification:51 - === Test 1: Domain Guardrail classification (keyword fast-path) ===
+2026-08-06 16:42:49.335 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-06 16:42:49.336 | INFO     | __main__:check:44 - [PASS] Out-of-scope query classified OUT_OF_SCOPE -> out_of_scope
+2026-08-06 16:42:49.337 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=6)
+2026-08-06 16:42:49.337 | INFO     | __main__:check:44 - [PASS] Domain query classified IN_SCOPE -> in_scope
+2026-08-06 16:42:49.337 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-06 16:42:49.338 | INFO     | __main__:check:44 - [PASS] Greeting classified IN_SCOPE (served by direct route) -> in_scope
+2026-08-06 16:42:49.338 | INFO     | __main__:test_guardrail_fail_open:81 - === Test 2: Fail-open strategy on LLM network failure ===
+2026-08-06 16:42:49.339 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-06 16:42:49.339 | WARNING  | src.agents.intent_guardrail:_classify_with_llm:215 - Failing open to IN_SCOPE due to LLM error
+2026-08-06 16:42:49.339 | INFO     | __main__:check:44 - [PASS] LLM failure defaults to IN_SCOPE (fail-open) -> LLM error, defaulted to in_scope: Simulated transient network failure
+2026-08-06 16:42:49.340 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-06 16:42:49.340 | INFO     | __main__:check:44 - [PASS] fail_open=False rejects on LLM failure (fail-closed) -> System error: Simulated transient network failure
+2026-08-06 16:42:49.341 | INFO     | __main__:test_router:112 - === Test 3: Query Router heuristics ===
+2026-08-06 16:42:49.341 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-06 16:42:49.341 | INFO     | __main__:check:44 - [PASS] Greeting -> direct
+2026-08-06 16:42:49.342 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-06 16:42:49.343 | INFO     | __main__:check:44 - [PASS] Live exchange rate -> web_search
+2026-08-06 16:42:49.343 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-06 16:42:49.344 | INFO     | __main__:check:44 - [PASS] Surplus analytics -> rag
+2026-08-06 16:42:49.344 | INFO     | __main__:test_web_search_formatting:132 - === Test 4: Web Search Tool markdown formatting ===
+2026-08-06 16:42:49.358 | INFO     | __main__:check:44 - [PASS] Markdown contains the query
+2026-08-06 16:42:49.359 | INFO     | __main__:check:44 - [PASS] Markdown contains the summary answer
+2026-08-06 16:42:49.359 | INFO     | __main__:check:44 - [PASS] Markdown contains the source URL
+2026-08-06 16:42:49.360 | INFO     | __main__:test_pipeline_end_to_end:157 - === Test 5: End-to-end pipeline routing ===
+2026-08-06 16:42:49.360 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-06 16:42:49.361 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-06 16:42:49.361 | INFO     | __main__:check:44 - [PASS] Out-of-scope short-circuits pipeline
+2026-08-06 16:42:49.362 | INFO     | __main__:check:44 - [PASS] Out-of-scope returns static refusal
+2026-08-06 16:42:49.362 | INFO     | __main__:check:44 - [PASS] Out-of-scope performs no web search
+2026-08-06 16:42:49.363 | INFO     | __main__:check:44 - [PASS] Out-of-scope is sub-second -> 1.0 ms
+2026-08-06 16:42:49.363 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-06 16:42:49.364 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-06 16:42:49.365 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-06 16:42:49.365 | INFO     | __main__:check:44 - [PASS] Greeting takes the direct route -> direct
+2026-08-06 16:42:49.366 | INFO     | __main__:check:44 - [PASS] Greeting skips the search tool
+2026-08-06 16:42:49.367 | INFO     | __main__:check:44 - [PASS] Greeting produces an answer
+2026-08-06 16:42:49.367 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-06 16:42:52.905 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-06 16:42:57.042 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-06 16:42:57.043 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-06 16:42:57.044 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'What is the current USD exchange rate right now? Sri Lanka latest'
+2026-08-06 16:42:57.045 | INFO     | __main__:check:44 - [PASS] Real-time query takes the web_search route -> web_search
+2026-08-06 16:42:57.047 | INFO     | __main__:check:44 - [PASS] web_search route calls the Tavily tool
+2026-08-06 16:42:57.047 | INFO     | __main__:check:44 - [PASS] web_search route returns source URLs
+2026-08-06 16:42:57.047 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-06 16:42:57.049 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-06 16:42:57.049 | INFO     | __main__:check:44 - [PASS] Domain query takes the rag route -> rag
+2026-08-06 16:42:57.050 | INFO     | __main__:check:44 - [PASS] rag route skips the search tool
+2026-08-06 16:42:57.050 | INFO     | __main__:check:44 - [PASS] rag handler answer is returned
+2026-08-06 16:42:57.051 | INFO     | __main__:main:233 - 
+============================================================
+2026-08-06 16:42:57.051 | INFO     | __main__:main:234 - RESULT: 24/24 checks passed
+2026-08-06 16:42:57.052 | INFO     | __main__:main:238 - ============================================================
+2026-08-06 16:43:31.888 | INFO     | __main__:main:223 - Running Guardrail + Direct Web Search smoke tests...
+
+2026-08-06 16:43:31.888 | INFO     | __main__:test_guardrail_classification:51 - === Test 1: Domain Guardrail classification (keyword fast-path) ===
+2026-08-06 16:43:31.888 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-06 16:43:31.889 | INFO     | __main__:check:44 - [PASS] Out-of-scope query classified OUT_OF_SCOPE -> out_of_scope
+2026-08-06 16:43:31.889 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=6)
+2026-08-06 16:43:31.889 | INFO     | __main__:check:44 - [PASS] Domain query classified IN_SCOPE -> in_scope
+2026-08-06 16:43:31.889 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-06 16:43:31.889 | INFO     | __main__:check:44 - [PASS] Greeting classified IN_SCOPE (served by direct route) -> in_scope
+2026-08-06 16:43:31.889 | INFO     | __main__:test_guardrail_fail_open:81 - === Test 2: Fail-open strategy on LLM network failure ===
+2026-08-06 16:43:31.889 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-06 16:43:31.889 | WARNING  | src.agents.intent_guardrail:_classify_with_llm:215 - Failing open to IN_SCOPE due to LLM error
+2026-08-06 16:43:31.889 | INFO     | __main__:check:44 - [PASS] LLM failure defaults to IN_SCOPE (fail-open) -> LLM error, defaulted to in_scope: Simulated transient network failure
+2026-08-06 16:43:31.889 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-06 16:43:31.889 | INFO     | __main__:check:44 - [PASS] fail_open=False rejects on LLM failure (fail-closed) -> System error: Simulated transient network failure
+2026-08-06 16:43:31.889 | INFO     | __main__:test_router:112 - === Test 3: Query Router heuristics ===
+2026-08-06 16:43:31.890 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-06 16:43:31.890 | INFO     | __main__:check:44 - [PASS] Greeting -> direct
+2026-08-06 16:43:31.890 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-06 16:43:31.890 | INFO     | __main__:check:44 - [PASS] Live exchange rate -> web_search
+2026-08-06 16:43:31.890 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-06 16:43:31.890 | INFO     | __main__:check:44 - [PASS] Surplus analytics -> rag
+2026-08-06 16:43:31.890 | INFO     | __main__:test_web_search_formatting:132 - === Test 4: Web Search Tool markdown formatting ===
+2026-08-06 16:43:31.890 | INFO     | __main__:check:44 - [PASS] Markdown contains the query
+2026-08-06 16:43:31.890 | INFO     | __main__:check:44 - [PASS] Markdown contains the summary answer
+2026-08-06 16:43:31.890 | INFO     | __main__:check:44 - [PASS] Markdown contains the source URL
+2026-08-06 16:43:31.890 | INFO     | __main__:test_pipeline_end_to_end:157 - === Test 5: End-to-end pipeline routing ===
+2026-08-06 16:43:31.890 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-06 16:43:31.891 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Out-of-scope short-circuits pipeline
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Out-of-scope returns static refusal
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Out-of-scope performs no web search
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Out-of-scope is sub-second -> 0.2 ms
+2026-08-06 16:43:31.891 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-06 16:43:31.891 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-06 16:43:31.891 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Greeting takes the direct route -> direct
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Greeting skips the search tool
+2026-08-06 16:43:31.891 | INFO     | __main__:check:44 - [PASS] Greeting produces an answer
+2026-08-06 16:43:31.892 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-06 16:43:32.747 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-06 16:43:34.198 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-06 16:43:34.198 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-06 16:43:34.198 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'What is the current USD exchange rate right now? Sri Lanka latest'
+2026-08-06 16:43:34.198 | INFO     | __main__:check:44 - [PASS] Real-time query takes the web_search route -> web_search
+2026-08-06 16:43:34.198 | INFO     | __main__:check:44 - [PASS] web_search route calls the Tavily tool
+2026-08-06 16:43:34.199 | INFO     | __main__:check:44 - [PASS] web_search route returns source URLs
+2026-08-06 16:43:34.199 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-06 16:43:34.199 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-06 16:43:34.199 | INFO     | __main__:check:44 - [PASS] Domain query takes the rag route -> rag
+2026-08-06 16:43:34.199 | INFO     | __main__:check:44 - [PASS] rag route skips the search tool
+2026-08-06 16:43:34.199 | INFO     | __main__:check:44 - [PASS] rag handler answer is returned
+2026-08-06 16:43:34.200 | INFO     | __main__:main:233 - 
+============================================================
+2026-08-06 16:43:34.200 | INFO     | __main__:main:234 - RESULT: 24/24 checks passed
+2026-08-06 16:43:34.200 | INFO     | __main__:main:238 - ============================================================
+2026-08-06 16:48:47.510 | INFO     | __main__:main:223 - Running Guardrail + Direct Web Search smoke tests...
+
+2026-08-06 16:48:47.511 | INFO     | __main__:test_guardrail_classification:51 - === Test 1: Domain Guardrail classification (keyword fast-path) ===
+2026-08-06 16:48:47.511 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-06 16:48:47.512 | INFO     | __main__:check:44 - [PASS] Out-of-scope query classified OUT_OF_SCOPE -> out_of_scope
+2026-08-06 16:48:47.512 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=6)
+2026-08-06 16:48:47.513 | INFO     | __main__:check:44 - [PASS] Domain query classified IN_SCOPE -> in_scope
+2026-08-06 16:48:47.513 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-06 16:48:47.513 | INFO     | __main__:check:44 - [PASS] Greeting classified IN_SCOPE (served by direct route) -> in_scope
+2026-08-06 16:48:47.514 | INFO     | __main__:test_guardrail_fail_open:81 - === Test 2: Fail-open strategy on LLM network failure ===
+2026-08-06 16:48:47.514 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-06 16:48:47.515 | WARNING  | src.agents.intent_guardrail:_classify_with_llm:215 - Failing open to IN_SCOPE due to LLM error
+2026-08-06 16:48:47.515 | INFO     | __main__:check:44 - [PASS] LLM failure defaults to IN_SCOPE (fail-open) -> LLM error, defaulted to in_scope: Simulated transient network failure
+2026-08-06 16:48:47.516 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-06 16:48:47.516 | INFO     | __main__:check:44 - [PASS] fail_open=False rejects on LLM failure (fail-closed) -> System error: Simulated transient network failure
+2026-08-06 16:48:47.517 | INFO     | __main__:test_router:112 - === Test 3: Query Router heuristics ===
+2026-08-06 16:48:47.517 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-06 16:48:47.518 | INFO     | __main__:check:44 - [PASS] Greeting -> direct
+2026-08-06 16:48:47.518 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-06 16:48:47.518 | INFO     | __main__:check:44 - [PASS] Live exchange rate -> web_search
+2026-08-06 16:48:47.519 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-06 16:48:47.519 | INFO     | __main__:check:44 - [PASS] Surplus analytics -> rag
+2026-08-06 16:48:47.520 | INFO     | __main__:test_web_search_formatting:132 - === Test 4: Web Search Tool markdown formatting ===
+2026-08-06 16:48:47.520 | INFO     | __main__:check:44 - [PASS] Markdown contains the query
+2026-08-06 16:48:47.521 | INFO     | __main__:check:44 - [PASS] Markdown contains the summary answer
+2026-08-06 16:48:47.521 | INFO     | __main__:check:44 - [PASS] Markdown contains the source URL
+2026-08-06 16:48:47.522 | INFO     | __main__:test_pipeline_end_to_end:157 - === Test 5: End-to-end pipeline routing ===
+2026-08-06 16:48:47.522 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-06 16:48:47.523 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-06 16:48:47.523 | INFO     | __main__:check:44 - [PASS] Out-of-scope short-circuits pipeline
+2026-08-06 16:48:47.523 | INFO     | __main__:check:44 - [PASS] Out-of-scope returns static refusal
+2026-08-06 16:48:47.524 | INFO     | __main__:check:44 - [PASS] Out-of-scope performs no web search
+2026-08-06 16:48:47.524 | INFO     | __main__:check:44 - [PASS] Out-of-scope is sub-second -> 0.9 ms
+2026-08-06 16:48:47.524 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-06 16:48:47.525 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-06 16:48:47.525 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-06 16:48:47.526 | INFO     | __main__:check:44 - [PASS] Greeting takes the direct route -> direct
+2026-08-06 16:48:47.527 | INFO     | __main__:check:44 - [PASS] Greeting skips the search tool
+2026-08-06 16:48:47.527 | INFO     | __main__:check:44 - [PASS] Greeting produces an answer
+2026-08-06 16:48:47.528 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-06 16:48:48.304 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-06 16:48:52.951 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-06 16:48:52.952 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-06 16:48:52.953 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'What is the current USD exchange rate right now? Sri Lanka latest'
+2026-08-06 16:48:52.954 | INFO     | __main__:check:44 - [PASS] Real-time query takes the web_search route -> web_search
+2026-08-06 16:48:52.954 | INFO     | __main__:check:44 - [PASS] web_search route calls the Tavily tool
+2026-08-06 16:48:52.956 | INFO     | __main__:check:44 - [PASS] web_search route returns source URLs
+2026-08-06 16:48:52.956 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-06 16:48:52.957 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-06 16:48:52.958 | INFO     | __main__:check:44 - [PASS] Domain query takes the rag route -> rag
+2026-08-06 16:48:52.958 | INFO     | __main__:check:44 - [PASS] rag route skips the search tool
+2026-08-06 16:48:52.959 | INFO     | __main__:check:44 - [PASS] rag handler answer is returned
+2026-08-06 16:48:52.959 | INFO     | __main__:main:233 - 
+============================================================
+2026-08-06 16:48:52.960 | INFO     | __main__:main:234 - RESULT: 24/24 checks passed
+2026-08-06 16:48:52.960 | INFO     | __main__:main:238 - ============================================================
+2026-08-06 18:45:26.652 | INFO     | __main__:main:15 - Testing Market Scout Agent + Demand Supply Matcher Agent Pipeline...
+2026-08-06 18:45:26.652 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-06 18:45:26.664 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-06 18:45:26.664 | INFO     | __main__:main:19 - Step 1: Running MarketScoutAgent async parallel crop analysis...
+2026-08-06 18:45:26.664 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-08-06 18:45:26.699 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-06 18:45:27.250 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-06 18:45:27.252 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-06 18:45:28.176 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-06 18:45:39.346 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-06 18:45:39.347 | INFO     | __main__:main:32 - Step 2: Running DemandSupplyMatcherAgent ChromaDB + FEFO matching...
+2026-08-06 18:45:39.347 | INFO     | src.agents.matcher:match_surplus_crops_async:94 - DemandSupplyMatcherAgent matching 1 surplus anomalies concurrently...
+2026-08-06 18:45:39.347 | INFO     | src.agents.matcher:match_single_insight_async:27 - DemandSupplyMatcherAgent finding B2B buyers for tomato surplus at DAMBULLA (51.08 Tons)...
+2026-08-06 18:45:42.487 | INFO     | src.agents.matcher:match_surplus_crops_async:100 - DemandSupplyMatcherAgent generated 2 total B2B Match Recommendations.
+2026-08-06 18:45:42.488 | INFO     | __main__:main:35 - Matcher Agent returned 2 B2B Matches:
+2026-08-06 18:45:42.488 | INFO     | __main__:main:37 -  - Buyer: Lanka Canning & Sauce Ltd      | Crop: tomato     | Volume: 26.08 T | FEFO Score: 0.52
+2026-08-06 18:45:42.488 | INFO     | __main__:main:37 -  - Buyer: Central Province Canning Mills | Crop: tomato     | Volume: 25.0  T | FEFO Score: 0.67

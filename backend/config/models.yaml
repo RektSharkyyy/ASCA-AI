@@ -35,3 +35,29 @@ agent_models:
 
   guardrail_validation:
     llm_model: "meta-llama/llama-3.1-8b-instruct"
+
+  # Fast binary in_scope / out_of_scope intent classifier
+  domain_guardrail:
+    provider: "openrouter"
+    llm_model: "meta-llama/llama-3.1-8b-instruct"
+    temperature: 0.0
+    fail_open: true
+
+  # Upstream direct | web_search | rag classifier
+  query_router:
+    provider: "openrouter"
+    llm_model: "meta-llama/llama-3.1-8b-instruct"
+    temperature: 0.0
+    fail_open_route: "rag"
+
+  # Conversational agent for direct + web_search routes
+  direct_agent:
+    provider: "openrouter"
+    llm_model: "meta-llama/llama-3.1-8b-instruct"
+    temperature: 0.3
+
+web_search:
+  provider: "tavily"
+  max_results: 5
+  search_depth: "basic"
+  include_answer: true

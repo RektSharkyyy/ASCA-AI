@@ -214,8 +214,8 @@ def generate_validated_blueprint_with_openrouter(
                 "recommended_action": "Route 30 tons to Lanka Sauce Factory."
             }
         ],
-        "executive_summary_sinhala": "දඹුල්ලේ තක්කාලි අස්වැන්න වැඩිවී මිල 48%කින් කඩා වැටීමේ අවදානමක් ඇත.",
-        "telegram_alert_text": "⚠️ දඹුල්ලේ තක්කාලි අතිරික්ත අවදානම: ටොන් 30ක් සෝස් කර්මාන්තශාලාවට යොමු කෙරේ.",
+        "executive_summary_sinhala": "There is a risk of tomato prices dropping by 40% due to increased harvest in Dambulla. 25 tons are redirected to sauce producers.",
+        "telegram_alert_text": "⚠️ Dambulla surplus risk: 25 tons of tomatoes auto-matched to sauce factories.",
         "confidence_score": 0.95
     }
     IMPORTANT RULES:
