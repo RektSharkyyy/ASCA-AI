@@ -641,3 +641,746 @@ target_centers
 2026-08-23 11:26:09.267 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
 2026-08-23 11:26:17.989 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
 2026-08-23 11:26:17.989 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:39:44.982 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:39:50.334 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:39:54.323 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:39:54.323 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:39:54.424 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:39:59.268 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:40:03.338 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:40:03.338 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:40:13.163 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:40:17.662 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:40:21.064 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:40:21.064 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:40:21.165 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:40:25.580 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:40:29.637 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:40:29.637 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:40:32.544 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:40:37.658 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:40:41.546 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:40:41.546 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:40:41.647 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:40:45.693 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:40:48.993 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:40:48.993 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:40:50.899 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:40:56.085 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:41:00.666 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:41:00.666 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:41:00.767 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:41:05.645 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:41:08.983 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:41:08.983 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:41:09.686 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:41:14.756 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:41:23.317 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:41:23.317 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:41:23.418 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:41:27.963 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:41:32.854 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:41:32.855 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:41:49.208 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:41:53.933 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:41:58.562 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:41:58.562 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:43:23.373 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:43:28.744 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:43:37.889 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:43:37.889 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:43:37.991 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:43:42.216 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:43:45.953 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:43:45.953 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:44:13.415 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:44:19.145 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:44:23.022 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:44:23.023 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:44:23.124 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:44:27.341 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:44:31.721 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:44:31.722 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:51:28.034 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:51:33.166 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:51:37.201 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:51:37.201 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:51:37.302 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:51:41.809 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:51:46.011 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:51:46.011 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:56:22.146 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:56:26.600 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:56:26.601 | INFO     | src.services.scraper_service:seed_historical_baseline:389 - [scraper] Seeding 30-day baseline (2 centres × 6 crops) from 2026-07-24 …
+2026-08-23 11:56:28.201 | INFO     | src.services.scraper_service:seed_historical_baseline:445 - [scraper] Baseline seed complete — 372 inserted, 0 existing rows preserved.
+2026-08-23 11:56:28.202 | INFO     | src.services.scraper_service:sync_center_prices:299 - [scraper] Syncing DAMBULLA for 2026-08-23 …
+2026-08-23 11:56:28.669 | INFO     | src.services.scraper_service:sync_center_prices:299 - [scraper] Syncing THAMBUTHTHEGAMA for 2026-08-23 …
+2026-08-23 11:56:28.779 | WARNING  | src.services.scraper_service:_scrape_harti_prices:116 - [scraper] HARTI returned HTTP 404
+2026-08-23 11:56:28.785 | WARNING  | src.services.scraper_service:_scrape_harti_prices:116 - [scraper] HARTI returned HTTP 404
+2026-08-23 11:56:29.456 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] DAMBULLA/tomato: LKR 249.39/kg | 44.77 T → UPDATE
+2026-08-23 11:56:29.663 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] DAMBULLA/carrot: LKR 333.5/kg | 21.69 T → UPDATE
+2026-08-23 11:56:29.792 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] DAMBULLA/beans: LKR 306.04/kg | 37.3 T → UPDATE
+2026-08-23 11:56:29.998 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] DAMBULLA/eggplant: LKR 204.41/kg | 16.42 T → UPDATE
+2026-08-23 11:56:30.219 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] DAMBULLA/cabbage: LKR 174.22/kg | 11.58 T → UPDATE
+2026-08-23 11:56:30.347 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] DAMBULLA/green_chilli: LKR 496.67/kg | 9.0 T → UPDATE
+2026-08-23 11:56:30.548 | INFO     | src.services.scraper_service:sync_center_prices:338 - [scraper] DAMBULLA sync done — 0 inserted, 6 updated for 2026-08-23
+2026-08-23 11:56:30.677 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] THAMBUTHTHEGAMA/tomato: LKR 221.22/kg | 38.6 T → UPDATE
+2026-08-23 11:56:30.808 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] THAMBUTHTHEGAMA/carrot: LKR 308.24/kg | 19.88 T → UPDATE
+2026-08-23 11:56:31.042 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] THAMBUTHTHEGAMA/beans: LKR 286.02/kg | 34.77 T → UPDATE
+2026-08-23 11:56:31.206 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] THAMBUTHTHEGAMA/eggplant: LKR 192.75/kg | 15.51 T → UPDATE
+2026-08-23 11:56:31.453 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] THAMBUTHTHEGAMA/cabbage: LKR 150.76/kg | 9.61 T → UPDATE
+2026-08-23 11:56:31.584 | DEBUG    | src.services.scraper_service:sync_center_prices:333 - [scraper] [seeded] THAMBUTHTHEGAMA/green_chilli: LKR 463.23/kg | 8.37 T → UPDATE
+2026-08-23 11:56:31.726 | INFO     | src.services.scraper_service:sync_center_prices:338 - [scraper] THAMBUTHTHEGAMA sync done — 0 inserted, 6 updated for 2026-08-23
+2026-08-23 11:56:31.924 | WARNING  | src.services.scraper_service:_scrape_harti_prices:116 - [scraper] HARTI returned HTTP 404
+2026-08-23 11:56:31.924 | INFO     | src.services.scraper_service:fetch_daily_market_prices:273 - [scraper] fetch_daily_market_prices(DAMBULLA) → 6 quotes (0 live from HARTI)
+2026-08-23 11:56:36.967 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:56:36.968 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 11:56:37.507 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:23.654 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:57:23.663 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:57:27.466 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 11:57:31.289 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 11:57:31.290 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 11:57:33.152 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:33.968 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 11:57:33.968 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 11:57:34.651 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:36.758 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 11:57:36.812 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 11:57:36.813 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 11:57:37.736 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 11:57:37.737 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 11:57:37.925 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 11:57:38.069 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 11:57:38.086 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:38.273 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:38.331 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 11:57:38.396 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 11:57:38.688 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 11:57:38.768 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 11:57:39.313 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 11:57:39.470 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 11:57:39.470 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 11:57:39.470 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 11:57:39.483 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 11:57:39.809 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 11:57:40.059 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 11:57:40.067 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 11:57:40.361 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 11:57:40.362 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 11:57:40.362 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 11:57:44.185 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 11:57:44.185 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 11:57:44.207 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 11:57:44.215 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 11:57:44.215 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 11:57:44.348 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 11:57:44.348 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 11:57:44.520 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:44.751 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:45.076 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 11:57:45.426 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 11:57:45.467 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 11:57:45.468 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 11:57:45.567 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:45.574 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 11:57:45.678 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 11:57:45.786 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 11:57:45.916 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 11:57:46.069 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 11:57:46.127 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 11:57:46.148 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:57:46.213 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 11:57:46.377 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 11:57:46.815 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 11:57:46.816 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 11:57:46.817 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 11:57:46.832 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 11:57:47.049 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 11:57:47.049 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 11:57:47.050 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 11:57:56.374 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=carrot
+2026-08-23 11:57:56.374 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for carrot at DAMBULLA
+2026-08-23 11:57:56.840 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 11:57:59.261 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=beans
+2026-08-23 11:57:59.261 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for beans at DAMBULLA
+2026-08-23 11:57:59.778 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 11:58:04.685 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=eggplant
+2026-08-23 11:58:04.685 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for eggplant at DAMBULLA
+2026-08-23 11:58:05.204 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 11:58:55.857 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=green_chilli
+2026-08-23 11:58:56.205 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for green_chilli at DAMBULLA
+2026-08-23 11:58:56.713 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 11:59:28.883 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 11:59:28.883 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 11:59:29.276 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 11:59:31.934 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=carrot
+2026-08-23 11:59:31.934 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for carrot at DAMBULLA
+2026-08-23 11:59:32.480 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 11:59:34.490 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=beans
+2026-08-23 11:59:34.490 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for beans at DAMBULLA
+2026-08-23 11:59:34.827 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 11:59:52.934 | INFO     | src.api.routes.chat:chat:96 - [chat] session=437298b7-9a79-456f-b57e-8f1dbdbee976 centre=DAMBULLA message='so what can be the price of carrots tommorow?'
+2026-08-23 11:59:52.935 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:59:53.280 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:59:57.867 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-23 11:59:57.868 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:59:57.868 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:59:58.804 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-23 11:59:58.804 | WARNING  | src.agents.pipeline:rag_node:110 - RAG route selected but no rag_handler is wired into the pipeline.
+2026-08-23 11:59:58.804 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for carrot at DAMBULLA
+2026-08-23 11:59:59.290 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:03:17.539 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:03:17.539 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:03:17.540 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:03:17.657 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:03:17.657 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:03:17.882 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:03:18.252 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:03:18.430 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.045 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.053 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.098 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.318 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:03:19.357 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.451 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.586 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.677 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.806 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.868 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:03:19.899 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:03:19.899 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:03:19.899 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:03:20.085 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:03:20.085 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:03:20.085 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:17:10.329 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 12:17:52.159 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:17:52.584 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:17:57.150 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-23 12:17:57.151 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:17:57.152 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:17:58.331 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-23 12:17:58.331 | INFO     | src.agents.rag_agent:handle_query:89 - [MarketRAGAgent] query='so what can be the price of carrots tommorow?' detected centre=DAMBULLA crop=carrot
+2026-08-23 12:17:58.333 | WARNING  | src.agents.rag_agent:_handle_single_crop_query:127 - Async DB fetch in RAG handler fallback: There is no current event loop in thread 'asyncio_0'.
+2026-08-23 12:17:58.744 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:17:58.745 | INFO     | src.agents.rag_agent:_lazy_load_llm:64 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:20:47.374 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 12:20:51.563 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 12:20:51.563 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 12:21:11.384 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 12:21:13.446 | INFO     | src.api.routes.chat:chat:96 - [chat] session=fe5d46d3-b771-460f-a6e3-f9bff166f464 centre=DAMBULLA message='so what can be the price of carrots tommorow?'
+2026-08-23 12:21:13.447 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:21:13.794 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:21:15.089 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-23 12:21:15.089 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:21:15.090 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:21:17.612 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-23 12:21:17.613 | INFO     | src.agents.rag_agent:handle_query:89 - [MarketRAGAgent] query='so what can be the price of carrots tommorow?' detected centre=DAMBULLA crop=carrot
+2026-08-23 12:21:17.616 | ERROR    | src.agents.market_scout:fetch_historical_data_async:139 - [market_scout] DB read failed for carrot @ DAMBULLA: Task <Task pending name='Task-10' coro=<MarketScoutAgent.fetch_historical_data_async() running at /media/shana/New Volume/1.Education/My Projects/ASCA AI/backend/src/agents/market_scout.py:117> cb=[_run_until_complete_cb() at /usr/lib/python3.12/asyncio/base_events.py:182]> got Future <Future pending cb=[BaseProtocol._on_waiter_completed()]> attached to a different loop — falling back to synthetic series.
+2026-08-23 12:21:18.109 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:21:18.110 | INFO     | src.agents.rag_agent:_lazy_load_llm:64 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:21:23.380 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for carrot at DAMBULLA
+2026-08-23 12:21:24.133 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:21:25.162 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:21:25.162 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:21:25.571 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:21:26.207 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:21:26.208 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:21:27.066 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:19.509 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:24:19.509 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:24:19.510 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:24:19.510 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:24:19.511 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:24:20.785 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:24:20.800 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:24:20.808 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:24:20.869 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:24:20.906 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.177 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.185 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.203 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.258 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.493 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.570 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.584 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.690 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:24:21.873 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:24:21.941 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:24:21.941 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:24:21.942 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:24:21.942 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:24:21.961 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:24:21.961 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:24:22.304 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:24:22.306 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:24:22.306 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:24:22.306 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:24:22.532 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:24:22.532 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:24:22.537 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:22.542 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:24:22.624 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:24:22.632 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:24:22.902 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:23.357 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:24:23.517 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:24:23.576 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:24:23.576 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:24:23.689 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:23.843 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:24:23.880 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:24:23.891 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:24:24.074 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:24:24.103 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:24:24.311 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:24:24.312 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:24:24.313 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:24:24.434 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:24:24.988 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:24:25.180 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:24:25.181 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:24:25.181 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:27:31.074 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 12:27:43.397 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 12:27:43.403 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 12:27:47.769 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 12:28:02.946 | INFO     | src.api.routes.chat:chat:96 - [chat] session=4f5a0dbe-df83-4fee-b754-6aca8ac11695 centre=DAMBULLA message='whats the price of tomato in sri lanka tommorow'
+2026-08-23 12:28:02.947 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 12:28:05.503 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: web_search (0.80)
+2026-08-23 12:28:05.503 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'whats the price of tomato in sri lanka tommorow'
+2026-08-23 12:28:05.506 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-23 12:28:05.506 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'whats the price of tomato in sri lanka tommorow' (depth=basic, max_results=5)
+2026-08-23 12:28:07.668 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 5 results
+2026-08-23 12:28:07.668 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:28:07.669 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 12:28:27.432 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:28:27.432 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:28:27.436 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:28:27.436 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:28:27.496 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:28:27.768 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:28:27.777 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:28:28.421 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:28:28.428 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:28:28.725 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:28:28.800 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:28:28.822 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:28:28.980 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:28:29.037 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:28:29.207 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:28:29.218 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:28:29.420 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:28:29.455 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:28:29.567 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:28:29.570 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:28:29.570 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:28:29.755 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:28:29.755 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:28:29.755 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:28:31.338 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:28:31.338 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:28:31.807 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:28:32.547 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:28:32.548 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:28:32.992 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:28:33.416 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:28:33.425 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:28:33.425 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:28:33.535 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:28:33.535 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:28:33.644 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:28:33.861 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:28:33.886 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:28:34.472 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:28:34.489 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:28:34.796 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:28:34.861 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:28:34.890 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:28:34.899 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:28:35.068 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:28:35.206 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:28:35.244 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:28:35.282 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:28:35.541 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:28:35.547 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:28:35.547 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:28:35.569 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:28:35.569 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:28:35.569 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:32:35.741 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:32:35.742 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:32:36.156 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:32:36.865 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 12:32:36.865 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 12:32:37.489 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:45:02.041 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:45:02.041 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:45:02.150 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 12:45:02.150 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 12:45:02.157 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:45:02.379 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:45:02.407 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:45:02.865 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:45:02.913 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:45:03.384 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:45:03.450 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 12:45:03.458 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:45:03.602 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 12:45:03.612 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 12:45:03.662 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:45:03.662 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:45:03.662 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:45:03.720 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 12:45:03.834 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 12:45:04.262 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 12:45:04.318 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 12:45:04.484 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 12:45:04.484 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 12:45:04.484 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 12:45:57.236 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 12:46:01.967 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 12:46:06.609 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 12:46:06.614 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 12:46:06.715 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:15:53.534 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:15:58.280 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:15:58.280 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:16:13.984 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 13:16:13.993 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 13:16:17.267 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:16:29.895 | INFO     | src.api.routes.chat:chat:96 - [chat] session=7e261cc4-2107-4fcc-8647-38c7b9e50427 centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:16:29.895 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:16:29.896 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:16:29.896 | INFO     | src.agents.rag_agent:handle_query:89 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:16:31.856 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:16:32.109 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:16:32.430 | INFO     | src.agents.rag_agent:_lazy_load_llm:64 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:16:33.589 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:16:33.591 | ERROR    | src.agents.market_scout:fetch_historical_data_async:139 - [market_scout] DB read failed for tomato @ DAMBULLA: Task <Task pending name='Task-12' coro=<RequestResponseCycle.run_asgi() running at /media/shana/New Volume/1.Education/My Projects/ASCA AI/backend/.venv/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py:422> cb=[set.discard()]> got Future <Future pending cb=[BaseProtocol._on_waiter_completed()]> attached to a different loop — falling back to synthetic series.
+2026-08-23 13:18:40.148 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:18:45.408 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:18:49.402 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:18:49.402 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:18:49.502 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:18:53.542 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:19:03.001 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:19:03.001 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:23:23.387 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:23:25.058 | INFO     | src.api.routes.chat:chat:96 - [chat] session=b2d84d9b-8194-4ce2-867f-82f4c5cf73ab centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:23:25.389 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:23:25.389 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:23:25.390 | INFO     | src.agents.rag_agent:handle_query:89 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:23:25.392 | ERROR    | src.agents.market_scout:fetch_historical_data_async:139 - [market_scout] DB read failed for tomato @ DAMBULLA: Task <Task pending name='Task-9' coro=<MarketScoutAgent.fetch_historical_data_async() running at /media/shana/New Volume/1.Education/My Projects/ASCA AI/backend/src/agents/market_scout.py:117> cb=[_run_until_complete_cb() at /usr/lib/python3.12/asyncio/base_events.py:182]> got Future <Future pending cb=[BaseProtocol._on_waiter_completed()]> attached to a different loop — falling back to synthetic series.
+2026-08-23 13:23:25.822 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:23:26.212 | INFO     | src.agents.rag_agent:_lazy_load_llm:64 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:24:51.204 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:24:52.098 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:24:52.547 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:24:56.839 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:25:07.436 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:25:07.436 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:25:07.537 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:25:11.506 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:25:21.456 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:25:21.457 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:31:05.322 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:31:07.164 | INFO     | src.api.routes.chat:chat:96 - [chat] session=a7e28c4d-6420-410f-aca1-1990cd5cc431 centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:31:07.164 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:31:07.164 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:31:07.164 | INFO     | src.agents.rag_agent:handle_query_async:90 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:31:07.886 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:31:08.163 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:31:08.529 | INFO     | src.agents.rag_agent:_lazy_load_llm:65 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:31:43.890 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:31:43.891 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:31:43.892 | INFO     | src.agents.rag_agent:handle_query_async:90 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:31:46.625 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:31:47.347 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:31:48.959 | INFO     | src.agents.rag_agent:_lazy_load_llm:65 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:40:54.950 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:40:55.467 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:40:55.898 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:41:00.331 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:41:05.184 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:41:05.184 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:41:05.286 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:41:09.352 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:41:13.594 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:41:13.595 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:41:14.248 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:41:15.225 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:41:15.491 | INFO     | src.api.routes.chat:chat:96 - [chat] session=0e17b9a8-d49e-4de6-96fb-d99464275a5b centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:41:15.492 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:41:15.492 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:41:15.492 | INFO     | src.agents.rag_agent:handle_query_async:90 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:41:15.694 | INFO     | src.api.routes.chat:chat:96 - [chat] session=7649ed8d-2019-4ab2-acb5-c13896a8c355 centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:41:15.694 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:41:15.694 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:41:15.695 | INFO     | src.agents.rag_agent:handle_query_async:90 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:41:15.945 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:41:16.217 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:41:16.644 | INFO     | src.agents.rag_agent:_lazy_load_llm:65 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:41:17.329 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:41:21.108 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:41:21.459 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:41:21.790 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:41:21.850 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:46:25.934 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:46:29.348 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:46:41.378 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:46:45.585 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:46:45.585 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:47:17.514 | INFO     | src.api.routes.chat:chat:96 - [chat] session=95300d64-c223-4b28-9e2d-13e9e86a7215 centre=DAMBULLA message='hello'
+2026-08-23 13:47:17.514 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 13:47:17.514 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 13:47:17.514 | ERROR    | src.api.routes.chat:chat:101 - [chat] pipeline error: name 'asyncio' is not defined
+2026-08-23 13:49:38.613 | INFO     | src.api.routes.chat:chat:96 - [chat] session=2edef369-b988-4ec7-9895-c04b2affb163 centre=DAMBULLA message='hello'
+2026-08-23 13:49:38.613 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 13:49:38.614 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 13:49:38.614 | ERROR    | src.api.routes.chat:chat:101 - [chat] pipeline error: name 'asyncio' is not defined
+2026-08-23 13:49:53.577 | INFO     | src.api.routes.chat:chat:96 - [chat] session=8dc7347a-0fa7-400b-ad0a-c2d78c67e3f7 centre=DAMBULLA message='hello'
+2026-08-23 13:49:53.578 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 13:49:53.578 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 13:49:53.578 | ERROR    | src.api.routes.chat:chat:101 - [chat] pipeline error: name 'asyncio' is not defined
+2026-08-23 13:50:05.556 | INFO     | src.api.routes.chat:chat:96 - [chat] session=f3ffecdb-9c82-4e0c-ba42-042806861ca4 centre=DAMBULLA message='helklo0o'
+2026-08-23 13:50:05.556 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:50:05.890 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:50:07.536 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as out_of_scope (confidence=0.00)
+2026-08-23 13:50:07.537 | INFO     | src.agents.pipeline:guardrail_node:74 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-23 13:50:22.650 | INFO     | src.api.routes.chat:chat:96 - [chat] session=f3ffecdb-9c82-4e0c-ba42-042806861ca4 centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:50:22.650 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:50:22.650 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:50:22.651 | INFO     | src.agents.rag_agent:handle_query_async:90 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:50:23.785 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:50:24.106 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:50:24.107 | INFO     | src.agents.rag_agent:_lazy_load_llm:65 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:50:52.363 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:50:53.174 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:53:02.539 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:53:06.991 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:53:11.846 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:53:11.847 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:53:11.948 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:53:16.630 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:53:16.630 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:53:16.630 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:53:16.803 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:53:21.041 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:53:21.306 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:53:21.793 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:53:21.882 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:53:21.882 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:55:13.948 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 13:55:19.182 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:55:23.970 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:55:23.970 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:55:24.755 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:55:26.006 | INFO     | src.api.routes.chat:chat:96 - [chat] session=41e084ef-eed0-4a26-a88f-747b08cbb2ec centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:55:26.006 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:55:26.006 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:55:26.006 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:55:26.577 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:55:27.139 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:55:27.637 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:55:29.242 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:55:29.784 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:55:43.481 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:55:45.274 | INFO     | src.api.routes.chat:chat:96 - [chat] session=4739ced7-82a6-4d41-8cfa-5cf8716975cb centre=DAMBULLA message='how is the market for carrot tomorrow?'
+2026-08-23 13:55:45.274 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:55:45.275 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:55:48.934 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-23 13:55:48.934 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:55:48.935 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:55:50.540 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-23 13:55:50.541 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='how is the market for carrot tomorrow?' detected centre=DAMBULLA crop=carrot
+2026-08-23 13:55:53.460 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 13:58:07.554 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 13:58:11.109 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 13:58:11.109 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 13:58:24.124 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:58:25.704 | INFO     | src.api.routes.chat:chat:96 - [chat] session=7be4ff8a-86d6-43ac-b113-fea6ac0bee3f centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 13:58:25.704 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 13:58:25.704 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 13:58:25.705 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 13:58:26.241 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:58:26.503 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:58:26.833 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:58:27.598 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 13:58:27.989 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:58:36.013 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 13:58:36.673 | INFO     | src.api.routes.chat:chat:96 - [chat] session=30957c76-14c2-439f-bc32-86b34872c75e centre=DAMBULLA message='දඹුල්ලේ අද තක්කාලි මිල කීයද?'
+2026-08-23 13:58:36.673 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:58:36.674 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:58:40.525 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-23 13:58:40.525 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:58:40.526 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:58:41.412 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-23 13:58:41.412 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='දඹුල්ලේ අද තක්කාලි මිල කීයද?' detected centre=DAMBULLA crop=None
+2026-08-23 13:58:41.869 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 13:58:42.476 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 13:58:43.193 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 13:58:43.910 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 13:58:44.661 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 13:58:45.340 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 13:59:35.422 | INFO     | src.api.routes.chat:chat:96 - [chat] session=a2504426-54bc-40c2-b43a-bc6b951fe29b centre=DAMBULLA message='hello'
+2026-08-23 13:59:35.422 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 13:59:35.422 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 13:59:35.423 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 13:59:35.423 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 13:59:35.424 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:00:36.562 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 14:00:41.456 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:00:45.987 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:00:45.987 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:00:46.790 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 14:00:50.927 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:00:55.569 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:00:55.570 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:00:55.772 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 14:00:59.814 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:01:04.805 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:01:04.805 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:01:04.906 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 14:01:09.447 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:01:13.712 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:01:13.713 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:01:14.355 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:01:15.830 | INFO     | src.api.routes.chat:chat:96 - [chat] session=9bbff947-57e0-4318-bf41-16529e462b57 centre=DAMBULLA message='hello'
+2026-08-23 14:01:15.830 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:01:15.830 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:01:15.831 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:01:15.831 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:01:16.189 | INFO     | src.agents.direct_agent:_lazy_load_llm:98 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:01:19.601 | INFO     | src.api.routes.chat:chat:96 - [chat] session=098c7205-cb58-47f6-8e16-2990ce0d4c04 centre=DAMBULLA message='hi there'
+2026-08-23 14:01:19.601 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:128 - Fast keyword match: IN_SCOPE (short greeting phrase)
+2026-08-23 14:01:19.602 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Short greeting phrase)
+2026-08-23 14:01:19.602 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:01:35.218 | INFO     | src.api.routes.chat:chat:96 - [chat] session=e4b647e9-2561-4d3e-a367-899891bee2fc centre=DAMBULLA message='hello'
+2026-08-23 14:01:35.218 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:01:35.218 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:01:35.219 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:02:04.978 | INFO     | src.api.routes.chat:chat:96 - [chat] session=e4b647e9-2561-4d3e-a367-899891bee2fc centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 14:02:04.978 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 14:02:04.978 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 14:02:04.978 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 14:02:05.561 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 14:02:05.818 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:02:05.819 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:45:44.966 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:45:49.761 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:45:49.761 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:45:57.103 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:45:59.073 | INFO     | src.api.routes.chat:chat:96 - [chat] session=b2e2d34d-0586-4b19-87dc-701af648fdf3 centre=DAMBULLA message='hi'
+2026-08-23 14:45:59.074 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:45:59.074 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:45:59.074 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:45:59.348 | INFO     | src.api.routes.chat:chat:96 - [chat] session=132a41ec-1fe1-4fa5-ab89-3072bc0d30ce centre=DAMBULLA message='hello'
+2026-08-23 14:45:59.348 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:45:59.348 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:45:59.349 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:46:08.440 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:46:08.735 | INFO     | src.api.routes.chat:chat:96 - [chat] session=b4c5aa02-862e-4cd1-9cd4-0fe0c06cbfeb centre=DAMBULLA message='what is the carrot price forecast in Dambulla?'
+2026-08-23 14:46:08.736 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:46:09.109 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:46:10.435 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.95)
+2026-08-23 14:46:10.435 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 14:46:10.435 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the carrot price forecast in Dambulla?' detected centre=DAMBULLA crop=carrot
+2026-08-23 14:46:11.163 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 14:46:11.473 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:46:11.474 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:48:19.990 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:48:23.675 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:48:23.675 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:48:41.476 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:48:43.159 | INFO     | src.api.routes.chat:chat:96 - [chat] session=2cdeae6d-9b58-4a23-bee4-bea22142998f centre=DAMBULLA message='hi'
+2026-08-23 14:48:43.159 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:126 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:48:43.159 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:48:43.160 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:48:43.559 | INFO     | src.api.routes.chat:chat:96 - [chat] session=19bf984d-3ed7-46df-80a3-2c47dd85f6eb centre=DAMBULLA message='hello'
+2026-08-23 14:48:43.559 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:126 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:48:43.559 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:48:43.560 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:48:48.322 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:48:48.582 | INFO     | src.api.routes.chat:chat:96 - [chat] session=93f7e393-83b7-4703-ba12-fabc66bfb4c9 centre=DAMBULLA message='what is the carrot price forecast in Dambulla?'
+2026-08-23 14:48:48.583 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:48:48.938 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:110 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:48:52.365 | INFO     | src.agents.intent_guardrail:_classify_with_llm:208 - LLM classified query as in_scope (confidence=0.90)
+2026-08-23 14:48:52.365 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 14:48:52.365 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the carrot price forecast in Dambulla?' detected centre=DAMBULLA crop=carrot
+2026-08-23 14:48:53.058 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 14:48:53.412 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:48:53.413 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:48:54.887 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for carrot at DAMBULLA
+2026-08-23 14:48:55.613 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 14:49:16.626 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:49:22.367 | INFO     | src.api.routes.chat:chat:96 - [chat] session=d4d5c86b-1bc6-4a31-9cf4-0c45ca4220ba centre=DAMBULLA message='hello'
+2026-08-23 14:49:22.367 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:126 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:49:22.367 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:49:22.367 | INFO     | src.agents.direct_agent:handle_direct:121 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:50:06.284 | INFO     | src.api.routes.chat:chat:96 - [chat] session=d4d5c86b-1bc6-4a31-9cf4-0c45ca4220ba centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 14:50:06.285 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:138 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 14:50:06.285 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 14:50:06.285 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 14:50:06.836 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 14:56:07.695 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:56:13.104 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:56:13.104 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:56:22.263 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:56:24.160 | INFO     | src.api.routes.chat:chat:96 - [chat] session=7e100b7c-8e25-4295-a581-a15305246739 centre=DAMBULLA message='hello'
+2026-08-23 14:56:24.161 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:56:24.161 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:56:24.163 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:56:24.163 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:56:24.583 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:56:26.891 | INFO     | src.api.routes.chat:chat:96 - [chat] session=aac04379-4e65-4811-96de-88e1222d2c54 centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 14:56:26.891 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 14:56:26.892 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 14:56:26.892 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 14:56:27.538 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 14:56:27.803 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:56:27.804 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:59:28.117 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 14:59:32.071 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 14:59:32.072 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 14:59:51.686 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 14:59:53.434 | INFO     | src.api.routes.chat:chat:96 - [chat] session=f67f1e5c-6365-4203-8d25-5bf714e42d32 centre=DAMBULLA message='hello'
+2026-08-23 14:59:53.434 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 14:59:53.435 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 14:59:53.435 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 14:59:53.436 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:59:53.797 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:59:56.001 | INFO     | src.api.routes.chat:chat:96 - [chat] session=56486dea-e9b9-4191-827a-c1f76b5a123c centre=DAMBULLA message='what is the 14-day tomato price forecast in Dambulla?'
+2026-08-23 14:59:56.001 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-23 14:59:56.002 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 2 internal-domain signal(s))
+2026-08-23 14:59:56.104 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what is the 14-day tomato price forecast in Dambulla?' detected centre=DAMBULLA crop=tomato
+2026-08-23 14:59:56.815 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 14:59:57.096 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:59:57.097 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 14:59:57.711 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 14:59:58.252 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 15:12:06.724 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 15:12:11.190 | INFO     | src.api.routes.chat:chat:96 - [chat] session=9960b17e-421f-4afb-8922-e3c889d61c03 centre=DAMBULLA message='hello'
+2026-08-23 15:12:11.190 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 15:12:11.190 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 15:12:11.191 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 15:12:29.762 | INFO     | src.api.routes.chat:chat:96 - [chat] session=9960b17e-421f-4afb-8922-e3c889d61c03 centre=DAMBULLA message='what the tomato price for next 14 days'
+2026-08-23 15:12:29.762 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:12:29.763 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:12:34.770 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-23 15:12:34.770 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:12:34.771 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:12:35.534 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-23 15:12:35.534 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='what the tomato price for next 14 days' detected centre=DAMBULLA crop=tomato
+2026-08-23 15:12:36.016 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 15:12:37.531 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 15:12:38.189 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 15:12:49.225 | INFO     | src.api.routes.chat:chat:96 - [chat] session=9960b17e-421f-4afb-8922-e3c889d61c03 centre=DAMBULLA message='okay cool'
+2026-08-23 15:12:49.225 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:128 - Fast keyword match: IN_SCOPE (short greeting phrase)
+2026-08-23 15:12:49.225 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Short greeting phrase)
+2026-08-23 15:12:49.225 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 15:24:04.598 | INFO     | src.api.routes.chat:chat:96 - [chat] session=9960b17e-421f-4afb-8922-e3c889d61c03 centre=DAMBULLA message='what kinda of report that can yoiu generate?'
+2026-08-23 15:24:06.199 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-23 15:24:07.062 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: direct (0.80)
+2026-08-23 15:24:07.063 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)

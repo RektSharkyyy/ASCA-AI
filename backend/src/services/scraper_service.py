@@ -13,6 +13,9 @@ Flow:
 Usage:
     from src.services.scraper_service import market_scraper
 
+    # Read today's bulletin for one centre (no DB write)
+    quotes = await market_scraper.fetch_daily_market_prices("DAMBULLA")
+
     # Sync today's prices for all centres
     result = await market_scraper.sync_all_centers()
 
@@ -21,9 +24,9 @@ Usage:
 """
 
 import asyncio
-import random
 from datetime import date, datetime, timedelta
 from typing import Any, Dict, List, Optional
+
 
 import httpx
 from bs4 import BeautifulSoup
@@ -227,6 +230,55 @@ class MarketScraperService:
     def __init__(self, crops: Optional[List[str]] = None):
         self.crops = crops or DEFAULT_CROP_BASKET
 
+    # ------------------------------------------------------------------ #
+    # 1. Read-only bulletin fetch (no DB write)
+    # ------------------------------------------------------------------ #
+    async def fetch_daily_market_prices(
+        self,
+        center_id: str = "DAMBULLA",
+        target_date: Optional[date] = None,
+    ) -> Dict[str, Dict[str, Any]]:
+        """
+        Scrape + parse the latest HARTI market bulletin for one economic centre.
+
+        Every crop in the basket is always returned so downstream callers get a
+        complete quote sheet:
+          - `source="harti_live"` → price parsed straight off the bulletin
+          - `source="seeded"`     → deterministic seasonal estimate (bulletin
+                                    unavailable for that crop / public holiday)
+
+        Returns:
+            { crop_name: {price_lkr, supply_tons, source, date, centre_id} }
+        """
+        centre = center_id.upper()
+        if target_date is None:
+            target_date = date.today()
+
+        live_prices = await _scrape_harti_prices(centre)
+        quotes: Dict[str, Dict[str, Any]] = {}
+
+        for crop in self.crops:
+            seed = _seeded_price(crop, centre, target_date)
+            live = live_prices.get(crop)
+            quotes[crop] = {
+                "centre_id":   centre,
+                "crop":        crop,
+                "crop_label":  crop_label(crop),
+                "price_lkr":   round(float(live), 2) if live else seed["price"],
+                "supply_tons": seed["supply"],
+                "source":      "harti_live" if live else "seeded",
+                "date":        target_date.isoformat(),
+            }
+
+        logger.info(
+            f"[scraper] fetch_daily_market_prices({centre}) → {len(quotes)} quotes "
+            f"({len(live_prices)} live from HARTI)"
+        )
+        return quotes
+
+    # ------------------------------------------------------------------ #
+    # 2. Sync (scrape → Supabase upsert)
+    # ------------------------------------------------------------------ #
     async def sync_center_prices(
         self,
         centre_id: str,
@@ -237,6 +289,7 @@ class MarketScraperService:
         Supabase.
 
         Returns a summary dict with inserted / updated crop counts.
+
         """
         if target_date is None:
             target_date = date.today()
@@ -303,48 +356,149 @@ class MarketScraperService:
         )
         return [r for r in results if not isinstance(r, Exception)]
 
-    async def seed_historical_baseline(self, days: int = 60) -> Dict[str, Any]:
+    # ------------------------------------------------------------------ #
+    # 3. Historical baseline seeding (gap-fill so Prophet has real rows)
+    # ------------------------------------------------------------------ #
+    async def seed_historical_baseline(
+        self,
+        days: int = 30,
+        centres: Optional[List[str]] = None,
+        crops: Optional[List[str]] = None,
+    ) -> Dict[str, Any]:
         """
-        Seed the last `days` days of historical price data for all crops and
-        centres.  Uses the seeded generator so values are realistic and
-        deterministic.
+        Seed the last `days` days of realistic historical trend data into
+        `market_data` so Prophet always has enough **real DB records** to fit an
+        accurate curve (no synthetic in-memory generator, no missing-data gaps).
 
-        Safe to call multiple times — upsert logic prevents duplicates.
+        Behaviour:
+          - Only **missing** (date, centre, crop) combinations are inserted.
+          - Rows that already exist (live HARTI scrapes / admin overrides) are
+            never overwritten — they are counted under `total_updated`.
+          - Fully idempotent: re-running inserts 0 rows once history is complete.
+
+        The whole range is read in ONE query and written in ONE transaction,
+        so seeding 30 days × 2 centres × 6 crops is a single round-trip batch.
         """
-        logger.info(f"[scraper] Seeding {days} days of historical baseline for {SUPPORTED_CENTRES} …")
-        today = date.today()
-        total_inserted = 0
-        total_updated  = 0
+        target_centres = [c.upper() for c in (centres or SUPPORTED_CENTRES)]
+        target_crops   = [normalise_crop(c) for c in (crops or self.crops)]
 
-        for delta in range(days, -1, -1):   # oldest → newest
-            target_date = today - timedelta(days=delta)
-            record_dt   = datetime(target_date.year, target_date.month, target_date.day)
-
-            async with AsyncSessionLocal() as session:
-                async with session.begin():
-                    for centre in SUPPORTED_CENTRES:
-                        for crop in self.crops:
-                            seed   = _seeded_price(crop, centre, target_date)
-                            is_new = await _upsert_market_record(
-                                session, centre, crop, record_dt,
-                                seed["price"], seed["supply"]
-                            )
-                            if is_new:
-                                total_inserted += 1
-                            else:
-                                total_updated  += 1
+        today      = date.today()
+        start_date = today - timedelta(days=days)
+        start_dt   = datetime(start_date.year, start_date.month, start_date.day)
 
         logger.info(
-            f"[scraper] Baseline seed complete — "
-            f"{total_inserted} inserted, {total_updated} updated."
+            f"[scraper] Seeding {days}-day baseline "
+            f"({len(target_centres)} centres × {len(target_crops)} crops) from {start_date} …"
+        )
+
+        inserted = 0
+        preserved = 0
+
+        async with AsyncSessionLocal() as session:
+            async with session.begin():
+                # 1. One bulk read of everything already stored in the window
+                stmt = select(
+                    MarketDataModel.center_id,
+                    MarketDataModel.crop_name,
+                    MarketDataModel.date,
+                ).where(
+                    and_(
+                        MarketDataModel.center_id.in_(target_centres),
+                        MarketDataModel.crop_name.in_(target_crops),
+                        MarketDataModel.date >= start_dt,
+                    )
+                )
+                rows = (await session.execute(stmt)).all()
+                existing_keys = {
+                    (r.center_id, r.crop_name, r.date.date())
+                    for r in rows
+                    if r.date is not None
+                }
+
+                # 2. Insert only the missing days (oldest → newest)
+                new_records: List[MarketDataModel] = []
+                for delta in range(days, -1, -1):
+                    day = today - timedelta(days=delta)
+                    record_dt = datetime(day.year, day.month, day.day)
+
+                    for centre in target_centres:
+                        for crop in target_crops:
+                            if (centre, crop, day) in existing_keys:
+                                preserved += 1
+                                continue
+                            seed = _seeded_price(crop, centre, day)
+                            new_records.append(
+                                MarketDataModel(
+                                    date=record_dt,
+                                    center_id=centre,
+                                    crop_name=crop,
+                                    wholesale_price_lkr=seed["price"],
+                                    supply_volume_tons=seed["supply"],
+                                    is_surplus_anomaly=False,
+                                )
+                            )
+                            inserted += 1
+
+                if new_records:
+                    session.add_all(new_records)
+
+        logger.info(
+            f"[scraper] Baseline seed complete — {inserted} inserted, "
+            f"{preserved} existing rows preserved."
         )
         return {
             "days_seeded":     days + 1,
-            "centres":         SUPPORTED_CENTRES,
-            "crops":           self.crops,
-            "total_inserted":  total_inserted,
-            "total_updated":   total_updated,
+            "centres":         target_centres,
+            "crops":           target_crops,
+            "total_inserted":  inserted,
+            "total_updated":   preserved,
         }
+
+    async def ensure_history(
+        self,
+        centre_id: str,
+        crop_name: str,
+        days: int = 60,
+        min_records: int = 30,
+    ) -> int:
+        """
+        Guarantee that `market_data` holds at least `min_records` rows for one
+        (centre, crop) pair inside the last `days` days.
+
+        Called by the Market Scout agent before fitting Prophet: if history is
+        thin the gap is back-filled straight into the DB, so the forecaster
+        always trains on real table rows instead of an in-memory generator.
+
+        Returns the number of rows inserted (0 when history was already complete).
+        """
+        centre = centre_id.upper()
+        crop   = normalise_crop(crop_name)
+
+        start_date = date.today() - timedelta(days=days)
+        start_dt   = datetime(start_date.year, start_date.month, start_date.day)
+
+        async with AsyncSessionLocal() as session:
+            stmt = select(MarketDataModel.id).where(
+                and_(
+                    MarketDataModel.center_id == centre,
+                    MarketDataModel.crop_name == crop,
+                    MarketDataModel.date >= start_dt,
+                )
+            )
+            count = len((await session.execute(stmt)).all())
+
+        if count >= min_records:
+            return 0
+
+        logger.info(
+            f"[scraper] ensure_history: only {count} rows for {centre}/{crop} "
+            f"(need {min_records}) → back-filling {days} days."
+        )
+        result = await self.seed_historical_baseline(
+            days=days, centres=[centre], crops=[crop]
+        )
+        return int(result["total_inserted"])
+
 
     async def manual_update_price(
         self,

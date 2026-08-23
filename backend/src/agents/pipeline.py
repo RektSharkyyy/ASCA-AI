@@ -13,6 +13,7 @@ The same wiring maps 1:1 onto a LangGraph StateGraph: each `*_node` method is a
 node, and `route_after_guardrail` / `route_after_router` are conditional edges.
 """
 
+import asyncio
 from typing import Any, Awaitable, Callable, Dict, List, Optional
 
 from pydantic import BaseModel, Field
@@ -25,9 +26,10 @@ from src.agents.intent_guardrail import (
 )
 from src.agents.router import QueryRoute, query_router
 from src.agents.direct_agent import direct_agent
+from src.agents.rag_agent import market_rag_agent, MarketRAGAgent
 
-# A RAG handler receives the user query and returns a final answer string.
-RagHandler = Callable[[str], str]
+# A RAG handler receives the user query (and optional centre_id) and returns a final answer string.
+RagHandler = Callable[..., str]
 
 
 class PipelineResult(BaseModel):
@@ -50,15 +52,15 @@ class ConversationPipeline:
 
     Args:
         rag_handler: Optional callable that handles the `rag` route (heavy domain
-            pipeline: market scout, matcher, report synthesizer). When omitted, the
-            pipeline returns a clear placeholder instead of failing.
+            pipeline: market scout, matcher, report synthesizer). When omitted,
+            defaults to `market_rag_agent.handle_query`.
     """
 
     def __init__(self, rag_handler: Optional[RagHandler] = None):
         self.guardrail = domain_guardrail
         self.router = query_router
         self.direct_agent = direct_agent
-        self.rag_handler = rag_handler
+        self.rag_handler = rag_handler or market_rag_agent.handle_query
 
     # ------------------------------------------------------------------ #
     # Nodes
@@ -102,9 +104,26 @@ class ConversationPipeline:
         """Terminal node for `direct` and `web_search` routes."""
         return self.direct_agent.as_graph_node(state)
 
+    async def rag_node_async(self, state: Dict[str, Any]) -> Dict[str, Any]:
+        """Terminal async node for the internal-data / domain pipeline route."""
+        query = state.get("query", "")
+        centre_id = state.get("centre_id", "DAMBULLA")
+
+        if hasattr(market_rag_agent, "handle_query_async"):
+            try:
+                answer = await market_rag_agent.handle_query_async(query, default_centre=centre_id)
+            except Exception as e:
+                logger.error(f"Async RAG handler failed: {e}")
+                answer = "I hit an error while analysing internal market data. Please try again."
+        else:
+            return self.rag_node(state)
+
+        return {**state, "answer": answer, "search_performed": False, "sources": []}
+
     def rag_node(self, state: Dict[str, Any]) -> Dict[str, Any]:
         """Terminal node for the internal-data / domain pipeline route."""
         query = state.get("query", "")
+        centre_id = state.get("centre_id", "DAMBULLA")
 
         if self.rag_handler is None:
             logger.warning("RAG route selected but no rag_handler is wired into the pipeline.")
@@ -119,7 +138,11 @@ class ConversationPipeline:
             }
 
         try:
-            answer = self.rag_handler(query)
+            # Pass centre_id if supported by the handler, otherwise fallback to query only
+            try:
+                answer = self.rag_handler(query, default_centre=centre_id)
+            except TypeError:
+                answer = self.rag_handler(query)
         except Exception as e:
             logger.error(f"RAG handler failed: {e}")
             answer = "I hit an error while analysing internal market data. Please try again."
@@ -143,9 +166,9 @@ class ConversationPipeline:
     # ------------------------------------------------------------------ #
     # Public API
     # ------------------------------------------------------------------ #
-    def run(self, query: str) -> PipelineResult:
+    def run(self, query: str, centre_id: str = "DAMBULLA") -> PipelineResult:
         """Executes one full turn through the pipeline."""
-        state: Dict[str, Any] = {"query": query}
+        state: Dict[str, Any] = {"query": query, "centre_id": centre_id}
 
         state = self.guardrail_node(state)
 
@@ -162,11 +185,24 @@ class ConversationPipeline:
 
         return self._to_result(state)
 
-    async def run_async(self, query: str) -> PipelineResult:
-        """Async wrapper so the pipeline can be awaited from FastAPI handlers."""
-        import asyncio
+    async def run_async(self, query: str, centre_id: str = "DAMBULLA") -> PipelineResult:
+        """Async execution turn through the pipeline."""
+        state: Dict[str, Any] = {"query": query, "centre_id": centre_id}
 
-        return await asyncio.to_thread(self.run, query)
+        state = self.guardrail_node(state)
+
+        if self.route_after_guardrail(state) == "refusal":
+            state = self.refusal_node(state)
+            return self._to_result(state)
+
+        state = self.router_node(state)
+
+        if self.route_after_router(state) == "direct_agent":
+            state = await asyncio.to_thread(self.direct_agent_node, state)
+        else:
+            state = await self.rag_node_async(state)
+
+        return self._to_result(state)
 
     @staticmethod
     def _to_result(state: Dict[str, Any]) -> PipelineResult:

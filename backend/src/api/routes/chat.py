@@ -96,7 +96,7 @@ async def chat(
     logger.info(f"[chat] session={session_id} centre={effective_centre} message='{req.message[:80]}'")
 
     try:
-        result = await conversation_pipeline.run_async(req.message)
+        result = await conversation_pipeline.run_async(req.message, centre_id=effective_centre)
     except Exception as exc:
         logger.error(f"[chat] pipeline error: {exc}")
         raise HTTPException(status_code=500, detail="Agent pipeline failed. Please try again.")
