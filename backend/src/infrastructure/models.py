@@ -66,3 +66,22 @@ class ExecutiveBlueprintModel(Base):
     pydantic_validated = Column(Boolean, default=True)
     confidence_score = Column(Float, default=1.0)
     telegram_broadcast_status = Column(String(50), default="PENDING")
+
+
+class ChatHistoryModel(Base):
+    """Stores per-user chat/search history, strictly isolated by user_id."""
+    __tablename__ = "chat_history"
+
+    id           = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    user_id      = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    session_id   = Column(String(100), nullable=False, index=True)
+    centre_id    = Column(String(50), nullable=True)
+    query        = Column(Text, nullable=False)
+    answer       = Column(Text, nullable=False)
+    route        = Column(String(50), nullable=True)
+    in_scope     = Column(Boolean, default=True)
+    chart_data   = Column(Text, nullable=True)   # JSON-serialised ChartPayload
+    latency_ms   = Column(Integer, nullable=True)
+    created_at   = Column(DateTime, default=datetime.utcnow, index=True)
+
+    user = relationship("UserModel", backref="chat_logs")

@@ -1384,3 +1384,73 @@ target_centers
 2026-08-23 15:24:06.199 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
 2026-08-23 15:24:07.062 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: direct (0.80)
 2026-08-23 15:24:07.063 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 15:50:44.402 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 15:50:49.060 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 15:50:54.725 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 15:50:54.726 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 15:50:58.635 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 15:51:02.915 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 15:51:09.959 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 15:51:09.959 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 15:51:10.060 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 15:51:14.190 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 15:51:17.744 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 15:51:17.744 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 15:51:41.703 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 15:52:41.476 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 15:52:46.011 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 15:52:46.011 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 15:52:46.112 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 15:52:50.591 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 15:52:53.906 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 15:52:53.906 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 15:52:53.914 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 15:52:53.919 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 15:58:49.258 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 15:58:53.630 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 15:58:53.630 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 15:59:10.213 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 15:59:11.683 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=9c578309-b7fb-4d14-a5ee-daf6a45c69fc centre=DAMBULLA message='Hello ASCA, what crops are popular in Dambulla?'
+2026-08-23 15:59:11.683 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:59:12.037 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:59:15.120 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-23 15:59:15.120 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 1 internal-domain signal(s))
+2026-08-23 15:59:15.122 | INFO     | src.agents.rag_agent:handle_query_async:108 - [MarketRAGAgent] query='Hello ASCA, what crops are popular in Dambulla?' detected centre=DAMBULLA crop=None
+2026-08-23 15:59:16.261 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-23 15:59:17.290 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for carrot @ DAMBULLA (source=supabase)
+2026-08-23 15:59:18.230 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for beans @ DAMBULLA (source=supabase)
+2026-08-23 15:59:19.034 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for eggplant @ DAMBULLA (source=supabase)
+2026-08-23 15:59:19.645 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for cabbage @ DAMBULLA (source=supabase)
+2026-08-23 15:59:20.361 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 31 daily rows from market_data for green_chilli @ DAMBULLA (source=supabase)
+2026-08-23 15:59:20.530 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 15:59:20.530 | INFO     | src.agents.rag_agent:_lazy_load_llm:82 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 16:04:53.140 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 16:04:57.391 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 16:04:57.392 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 16:05:09.207 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 16:05:12.582 | INFO     | src.api.routes.chat:clear_all_history:315 - [chat] cleared all history for user=1
+2026-08-23 16:07:20.122 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 16:09:39.780 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=d2c9bc29-5fd4-482f-90cc-84a1faa4815c centre=DAMBULLA message='hello'
+2026-08-23 16:09:39.780 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 16:09:39.780 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 16:09:39.781 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 16:09:39.781 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 16:09:40.106 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 16:09:42.861 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=1 for user=1
+2026-08-23 16:09:56.191 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=d2c9bc29-5fd4-482f-90cc-84a1faa4815c centre=DAMBULLA message='whos kakarala'
+2026-08-23 16:09:56.192 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 16:09:56.192 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 16:09:59.236 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as out_of_scope (confidence=0.00)
+2026-08-23 16:09:59.236 | INFO     | src.agents.pipeline:guardrail_node:75 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-23 16:09:59.969 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=2 for user=1
+2026-08-23 16:10:05.324 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=d2c9bc29-5fd4-482f-90cc-84a1faa4815c centre=DAMBULLA message='okay'
+2026-08-23 16:10:05.325 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-23 16:10:05.325 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-23 16:10:05.325 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 16:10:07.223 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=3 for user=1
+2026-08-23 16:10:20.700 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=d2c9bc29-5fd4-482f-90cc-84a1faa4815c centre=DAMBULLA message='hiii'
+2026-08-23 16:10:20.700 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:128 - Fast keyword match: IN_SCOPE (short greeting phrase)
+2026-08-23 16:10:20.700 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Short greeting phrase)
+2026-08-23 16:10:20.701 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-23 16:10:22.890 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=4 for user=1
+2026-08-23 17:11:47.156 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.

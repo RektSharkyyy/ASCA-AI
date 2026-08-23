@@ -123,6 +123,29 @@ class ChatResponse(BaseModel):
     created_at: datetime = Field(default_factory=_utcnow)
 
 
+class ChatHistoryItem(BaseModel):
+    """A single saved message pair (query + answer) in a session."""
+    id: int
+    session_id: str
+    query: str
+    answer: str
+    route: Optional[str] = None
+    in_scope: bool = True
+    centre_id: Optional[str] = None
+    chart_data: Optional[str] = None   # raw JSON string
+    latency_ms: Optional[int] = None
+    created_at: datetime
+
+
+class ChatSessionSummary(BaseModel):
+    """Summary card shown in the history sidebar (one per session)."""
+    session_id: str
+    title: str                 # derived from first query
+    message_count: int
+    centre_id: Optional[str] = None
+    last_message_at: datetime
+
+
 # --------------------------------------------------------------------------- #
 # Market analytics
 # --------------------------------------------------------------------------- #

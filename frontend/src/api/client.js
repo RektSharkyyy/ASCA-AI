@@ -68,6 +68,22 @@ export const postChat = (message, centreId = 'DAMBULLA', sessionId = null) =>
     body: JSON.stringify({ message, centre_id: centreId, session_id: sessionId }),
   });
 
+/** Fetch all conversation sessions for the current user (newest first). */
+export const getChatSessions = () => request('/chat/history');
+
+/** Fetch all messages inside a specific session. */
+export const getChatSessionMessages = (sessionId) =>
+  request(`/chat/history/${encodeURIComponent(sessionId)}`);
+
+/** Delete a specific conversation session. */
+export const deleteChatSession = (sessionId) =>
+  request(`/chat/history/${encodeURIComponent(sessionId)}`, { method: 'DELETE' });
+
+/** Wipe ALL chat history for the current user. */
+export const clearAllChatHistory = () =>
+  request('/chat/history', { method: 'DELETE' });
+
+
 // --------------------------------------------------------------------------- //
 // Market analytics
 // --------------------------------------------------------------------------- //
