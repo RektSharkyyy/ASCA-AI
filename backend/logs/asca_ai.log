@@ -634,3 +634,10 @@ target_centers
 2026-08-23 11:23:10.552 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
 2026-08-23 11:23:41.763 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
 2026-08-23 11:25:55.613 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:25:59.738 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:26:04.003 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:26:04.003 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:26:04.104 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:26:09.267 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:26:17.989 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:26:17.989 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
