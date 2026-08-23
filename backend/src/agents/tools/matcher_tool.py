@@ -154,8 +154,36 @@ class ChromaB2BStore:
         )
         logger.info(f"Successfully seeded {len(seed_buyers)} B2B buyers into ChromaDB.")
 
+    def list_all_buyers(self) -> List[Dict[str, Any]]:
+        """Returns every registered B2B buyer (used by the API buyer directory)."""
+        try:
+            records = self.collection.get(include=["metadatas"])
+        except Exception as e:
+            logger.error(f"Failed to list B2B buyers from ChromaDB: {str(e)}")
+            return []
+
+        buyers: List[Dict[str, Any]] = []
+        ids = records.get("ids", []) or []
+        metadatas = records.get("metadatas", []) or []
+
+        for buyer_id, metadata in zip(ids, metadatas):
+            metadata = metadata or {}
+            crops_csv = str(metadata.get("crops_csv", ""))
+            buyers.append({
+                "buyer_code": buyer_id,
+                "company_name": metadata.get("company_name", buyer_id),
+                "buyer_type": metadata.get("buyer_type", "Processing Plant"),
+                "daily_capacity_tons": float(metadata.get("capacity_tons", 0.0) or 0.0),
+                "location": metadata.get("location", "Sri Lanka"),
+                "preferred_crops": [c.strip() for c in crops_csv.split(",") if c.strip()],
+            })
+
+        buyers.sort(key=lambda b: b["company_name"])
+        return buyers
+
     def search_buyers_for_crop(self, crop_name: str, top_k: int = 3) -> List[Dict[str, Any]]:
         """Searches ChromaDB for B2B buyers matching the surplus crop name."""
+
         query_text = f"Processing factory interested in buying excess {crop_name} harvest for sauce canning juice dehydration."
         results = self.collection.query(
             query_texts=[query_text],

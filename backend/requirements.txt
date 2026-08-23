@@ -40,6 +40,15 @@ chromadb>=0.4.24
 #++++++++++++++++++++++++++++ Database
 sqlalchemy>=2.0.28
 aiosqlite>=0.20.0
+asyncpg>=0.29.0
+
+#++++++++++++++++++++++++++++ Authentication (JWT)
+python-jose[cryptography]>=3.3.0
+passlib[bcrypt]>=1.7.4
+
+#++++++++++++++++++++++++++++ Market Price Scraper
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
 
 # Telegram Bot API
 python-telegram-bot>=21.0.1

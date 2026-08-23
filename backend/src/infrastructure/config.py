@@ -28,6 +28,14 @@ class Settings(BaseSettings):
 
     CHROMA_DB_DIR: str = Field(default=str(BASE_DIR / "data" / "chroma_db"), env="CHROMA_DB_DIR")
     DATABASE_URL: str = Field(default=f"sqlite+aiosqlite:///{BASE_DIR}/data/asca_ai.db", env="DATABASE_URL")
+    SUPABASE_URL: str = Field(default="", env="SUPABASE_URL")
+    SUPABASE_KEY: str = Field(default="", env="SUPABASE_KEY")
+
+    # JWT Authentication
+    JWT_SECRET: str = Field(default="change-me-in-production", env="JWT_SECRET")
+    JWT_ALGORITHM: str = Field(default="HS256", env="JWT_ALGORITHM")
+    JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = Field(default=30, env="JWT_ACCESS_TOKEN_EXPIRE_MINUTES")
+    JWT_REFRESH_TOKEN_EXPIRE_DAYS: int = Field(default=7, env="JWT_REFRESH_TOKEN_EXPIRE_DAYS")
 
     class Config:
         env_file = str(BASE_DIR / ".env")

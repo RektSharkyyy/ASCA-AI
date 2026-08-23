@@ -7,12 +7,18 @@ import B2BView from './views/B2BView';
 import BlueprintsView from './views/BlueprintsView';
 import SettingsView from './views/SettingsView';
 import RightPanel from './components/RightPanel';
+import LoginView from './views/LoginView';
+import { useAuth } from './auth/AuthContext';
 
 export default function App() {
+  const { isAuthenticated, user, logout } = useAuth();
   const [activeView,   setActiveView]   = useState('chat');
   const [activeCenter, setActiveCenter] = useState('DAMBULLA');
   const [panelOpen,    setPanelOpen]    = useState(false);
   const [artifact,     setArtifact]     = useState(null);
+
+  // Auth guard — show login page if not authenticated
+  if (!isAuthenticated) return <LoginView />;
 
   const handleArtifact = (a) => {
     setArtifact(a);

@@ -135,4 +135,106 @@ class MarketForecastEngine:
             crop_name
         )
 
+    # ------------------------------------------------------------------ #
+    # Chart-ready curve (single model fit, reused by the HTTP API)
+    # ------------------------------------------------------------------ #
+    def forecast_curve_sync(
+        self,
+        historical_df: pd.DataFrame,
+        center_id: str,
+        crop_name: str,
+        history_days: int = 8
+    ) -> Dict[str, Any]:
+        """
+        Returns the standard forecast summary PLUS a day-by-day curve for charting.
+
+        Runs Prophet only ONCE, then derives both the summary metrics and the
+        historical/forecast series so the API never pays for a second model fit.
+
+        Curve contract:
+            - `history`: last `history_days` observed prices (oldest -> newest)
+            - `forecast`: next `horizon_days` predicted prices with uncertainty bands
+        """
+        summary = self.forecast_crop_prices_sync(historical_df, center_id, crop_name)
+        history: List[Dict[str, Any]] = []
+        forecast_points: List[Dict[str, Any]] = []
+
+        try:
+            df = historical_df[['ds', 'y']].copy()
+            df['ds'] = pd.to_datetime(df['ds'])
+            df['y'] = pd.to_numeric(df['y'], errors='coerce')
+            df = df.dropna().sort_values('ds')
+
+            for _, row in df.tail(max(1, history_days)).iterrows():
+                history.append({
+                    "date": row['ds'].to_pydatetime(),
+                    "price": round(float(row['y']), 2),
+                })
+
+            if len(df) >= 7:
+                model = Prophet(
+                    daily_seasonality=True,
+                    weekly_seasonality=True,
+                    yearly_seasonality=False,
+                    changepoint_prior_scale=0.05
+                )
+                model.fit(df)
+                future = model.make_future_dataframe(periods=self.horizon_days)
+                forecast = model.predict(future).tail(self.horizon_days)
+
+                for _, row in forecast.iterrows():
+                    yhat = float(np.clip(row['yhat'], a_min=10.0, a_max=None))
+                    forecast_points.append({
+                        "date": pd.to_datetime(row['ds']).to_pydatetime(),
+                        "price": round(yhat, 2),
+                        "lower": round(float(np.clip(row.get('yhat_lower', yhat * 0.9), a_min=5.0, a_max=None)), 2),
+                        "upper": round(float(max(row.get('yhat_upper', yhat * 1.1), yhat)), 2),
+                    })
+
+        except Exception as e:
+            logger.error(f"Forecast curve generation failed for {crop_name} at {center_id}: {str(e)}")
+
+        if not forecast_points:
+            forecast_points = self._linear_curve_fallback(summary, history)
+
+        return {**summary, "history": history, "forecast": forecast_points}
+
+    def _linear_curve_fallback(
+        self,
+        summary: Dict[str, Any],
+        history: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
+        """Straight-line interpolation between current and predicted price."""
+        current = float(summary.get("current_wholesale_price_lkr", 200.0))
+        target = float(summary.get("predicted_wholesale_price_lkr", current))
+        last_date = history[-1]["date"] if history else datetime.now()
+
+        points: List[Dict[str, Any]] = []
+        for step in range(1, self.horizon_days + 1):
+            price = current + (target - current) * (step / self.horizon_days)
+            points.append({
+                "date": last_date + timedelta(days=step),
+                "price": round(price, 2),
+                "lower": round(price * 0.9, 2),
+                "upper": round(price * 1.1, 2),
+            })
+        return points
+
+    async def forecast_curve_async(
+        self,
+        historical_df: pd.DataFrame,
+        center_id: str,
+        crop_name: str,
+        history_days: int = 8
+    ) -> Dict[str, Any]:
+        """Async wrapper: keeps the event loop free while Prophet fits the model."""
+        return await asyncio.to_thread(
+            self.forecast_curve_sync,
+            historical_df,
+            center_id,
+            crop_name,
+            history_days
+        )
+
 forecast_engine = MarketForecastEngine()
+

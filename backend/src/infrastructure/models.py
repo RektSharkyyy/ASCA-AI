@@ -4,6 +4,19 @@ from sqlalchemy import Column, Integer, String, Float, Boolean, DateTime, Text, 
 from sqlalchemy.orm import relationship
 from src.infrastructure.db import Base
 
+
+class UserModel(Base):
+    """Application user table — stores credentials and roles."""
+    __tablename__ = "users"
+
+    id              = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    email           = Column(String(255), unique=True, index=True, nullable=False)
+    full_name       = Column(String(150), nullable=False)
+    hashed_password = Column(String(255), nullable=False)
+    role            = Column(String(50), default="viewer", nullable=False)  # viewer | admin
+    is_active       = Column(Boolean, default=True, nullable=False)
+    created_at      = Column(DateTime, default=datetime.utcnow)
+
 class MarketDataModel(Base):
     __tablename__ = "market_data"
 

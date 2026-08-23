@@ -356,3 +356,281 @@ target_centers
 2026-08-06 18:45:42.488 | INFO     | __main__:main:35 - Matcher Agent returned 2 B2B Matches:
 2026-08-06 18:45:42.488 | INFO     | __main__:main:37 -  - Buyer: Lanka Canning & Sauce Ltd      | Crop: tomato     | Volume: 26.08 T | FEFO Score: 0.52
 2026-08-06 18:45:42.488 | INFO     | __main__:main:37 -  - Buyer: Central Province Canning Mills | Crop: tomato     | Volume: 25.0  T | FEFO Score: 0.67
+2026-08-20 11:54:01.941 | INFO     | __main__:main:15 - Testing Market Scout Agent + Demand Supply Matcher Agent Pipeline...
+2026-08-20 11:54:01.941 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-20 11:54:01.960 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-20 11:54:01.960 | INFO     | __main__:main:19 - Step 1: Running MarketScoutAgent async parallel crop analysis...
+2026-08-20 11:54:01.960 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-08-20 11:54:01.979 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-20 11:54:01.981 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-20 11:54:01.982 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-20 11:54:01.983 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-20 11:54:02.672 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-20 11:54:02.673 | INFO     | __main__:main:32 - Step 2: Running DemandSupplyMatcherAgent ChromaDB + FEFO matching...
+2026-08-20 11:54:02.673 | INFO     | src.agents.matcher:match_surplus_crops_async:94 - DemandSupplyMatcherAgent matching 1 surplus anomalies concurrently...
+2026-08-20 11:54:02.673 | INFO     | src.agents.matcher:match_single_insight_async:27 - DemandSupplyMatcherAgent finding B2B buyers for tomato surplus at DAMBULLA (54.42 Tons)...
+2026-08-20 11:55:46.625 | INFO     | src.agents.matcher:match_surplus_crops_async:100 - DemandSupplyMatcherAgent generated 2 total B2B Match Recommendations.
+2026-08-20 11:55:46.625 | INFO     | __main__:main:35 - Matcher Agent returned 2 B2B Matches:
+2026-08-20 11:55:46.626 | INFO     | __main__:main:37 -  - Buyer: Lanka Canning & Sauce Ltd      | Crop: tomato     | Volume: 29.42 T | FEFO Score: 0.55
+2026-08-20 11:55:46.626 | INFO     | __main__:main:37 -  - Buyer: Central Province Canning Mills | Crop: tomato     | Volume: 25.0  T | FEFO Score: 0.67
+2026-08-20 11:57:01.888 | INFO     | __main__:main:223 - Running Guardrail + Direct Web Search smoke tests...
+
+2026-08-20 11:57:01.888 | INFO     | __main__:test_guardrail_classification:51 - === Test 1: Domain Guardrail classification (keyword fast-path) ===
+2026-08-20 11:57:01.888 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-20 11:57:01.888 | INFO     | __main__:check:44 - [PASS] Out-of-scope query classified OUT_OF_SCOPE -> out_of_scope
+2026-08-20 11:57:01.888 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=6)
+2026-08-20 11:57:01.889 | INFO     | __main__:check:44 - [PASS] Domain query classified IN_SCOPE -> in_scope
+2026-08-20 11:57:01.889 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-20 11:57:01.889 | INFO     | __main__:check:44 - [PASS] Greeting classified IN_SCOPE (served by direct route) -> in_scope
+2026-08-20 11:57:01.889 | INFO     | __main__:test_guardrail_fail_open:81 - === Test 2: Fail-open strategy on LLM network failure ===
+2026-08-20 11:57:01.889 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-20 11:57:01.889 | WARNING  | src.agents.intent_guardrail:_classify_with_llm:215 - Failing open to IN_SCOPE due to LLM error
+2026-08-20 11:57:01.889 | INFO     | __main__:check:44 - [PASS] LLM failure defaults to IN_SCOPE (fail-open) -> LLM error, defaulted to in_scope: Simulated transient network failure
+2026-08-20 11:57:01.889 | ERROR    | src.agents.intent_guardrail:_classify_with_llm:211 - Domain Guardrail LLM error: Simulated transient network failure
+2026-08-20 11:57:01.889 | INFO     | __main__:check:44 - [PASS] fail_open=False rejects on LLM failure (fail-closed) -> System error: Simulated transient network failure
+2026-08-20 11:57:01.889 | INFO     | __main__:test_router:112 - === Test 3: Query Router heuristics ===
+2026-08-20 11:57:01.890 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-20 11:57:01.890 | INFO     | __main__:check:44 - [PASS] Greeting -> direct
+2026-08-20 11:57:01.890 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-20 11:57:01.890 | INFO     | __main__:check:44 - [PASS] Live exchange rate -> web_search
+2026-08-20 11:57:01.891 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-20 11:57:01.891 | INFO     | __main__:check:44 - [PASS] Surplus analytics -> rag
+2026-08-20 11:57:01.891 | INFO     | __main__:test_web_search_formatting:132 - === Test 4: Web Search Tool markdown formatting ===
+2026-08-20 11:57:01.891 | INFO     | __main__:check:44 - [PASS] Markdown contains the query
+2026-08-20 11:57:01.891 | INFO     | __main__:check:44 - [PASS] Markdown contains the summary answer
+2026-08-20 11:57:01.891 | INFO     | __main__:check:44 - [PASS] Markdown contains the source URL
+2026-08-20 11:57:01.892 | INFO     | __main__:test_pipeline_end_to_end:157 - === Test 5: End-to-end pipeline routing ===
+2026-08-20 11:57:01.892 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:142 - Fast keyword match: OUT_OF_SCOPE (matches=4)
+2026-08-20 11:57:01.892 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-20 11:57:01.892 | INFO     | __main__:check:44 - [PASS] Out-of-scope short-circuits pipeline
+2026-08-20 11:57:01.892 | INFO     | __main__:check:44 - [PASS] Out-of-scope returns static refusal
+2026-08-20 11:57:01.892 | INFO     | __main__:check:44 - [PASS] Out-of-scope performs no web search
+2026-08-20 11:57:01.892 | INFO     | __main__:check:44 - [PASS] Out-of-scope is sub-second -> 0.3 ms
+2026-08-20 11:57:01.892 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-20 11:57:01.893 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-20 11:57:01.893 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-20 11:57:01.893 | INFO     | __main__:check:44 - [PASS] Greeting takes the direct route -> direct
+2026-08-20 11:57:01.893 | INFO     | __main__:check:44 - [PASS] Greeting skips the search tool
+2026-08-20 11:57:01.893 | INFO     | __main__:check:44 - [PASS] Greeting produces an answer
+2026-08-20 11:57:01.893 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-20 11:57:03.220 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-20 11:57:04.631 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-20 11:57:04.631 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 3 real-time information signal(s))
+2026-08-20 11:57:04.631 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'What is the current USD exchange rate right now? Sri Lanka latest'
+2026-08-20 11:57:04.631 | INFO     | __main__:check:44 - [PASS] Real-time query takes the web_search route -> web_search
+2026-08-20 11:57:04.632 | INFO     | __main__:check:44 - [PASS] web_search route calls the Tavily tool
+2026-08-20 11:57:04.632 | INFO     | __main__:check:44 - [PASS] web_search route returns source URLs
+2026-08-20 11:57:04.632 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=4)
+2026-08-20 11:57:04.632 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 3 internal-domain signal(s))
+2026-08-20 11:57:04.632 | INFO     | __main__:check:44 - [PASS] Domain query takes the rag route -> rag
+2026-08-20 11:57:04.632 | INFO     | __main__:check:44 - [PASS] rag route skips the search tool
+2026-08-20 11:57:04.632 | INFO     | __main__:check:44 - [PASS] rag handler answer is returned
+2026-08-20 11:57:04.632 | INFO     | __main__:main:233 - 
+============================================================
+2026-08-20 11:57:04.633 | INFO     | __main__:main:234 - RESULT: 24/24 checks passed
+2026-08-20 11:57:04.633 | INFO     | __main__:main:238 - ============================================================
+2026-08-20 16:07:32.106 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-20 16:07:32.115 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-20 16:07:32.116 | INFO     | src.api.main:_startup:121 - ASCA AI FastAPI server started — all agents ready.
+2026-08-20 16:07:58.034 | INFO     | src.api.routes.chat:chat:90 - [chat] session=2b9c2ebe-7de8-4244-b714-112f237b21f1 centre=DAMBULLA message='hello'
+2026-08-20 16:07:58.035 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-20 16:07:58.035 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-20 16:07:58.035 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-20 16:07:58.036 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-20 16:07:58.842 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-20 16:14:52.217 | INFO     | src.api.routes.chat:chat:90 - [chat] session=b75152b6-c3c7-41ff-a62c-36bf67843c85 centre=DAMBULLA message='hello'
+2026-08-20 16:14:52.218 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-20 16:14:52.218 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-20 16:14:52.218 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-20 16:25:13.594 | INFO     | src.api.routes.chat:chat:90 - [chat] session=a1cefb56-70b2-4c05-8511-ecabb0737c3e centre=DAMBULLA message='hello'
+2026-08-20 16:25:13.594 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-20 16:25:13.594 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-20 16:25:13.594 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-20 16:32:04.564 | INFO     | src.api.routes.chat:chat:90 - [chat] session=c41a3b25-917f-47bd-aa10-5a5b8506b1b6 centre=DAMBULLA message='hello'
+2026-08-20 16:32:04.564 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-20 16:32:04.564 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-20 16:32:04.565 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-20 16:32:17.277 | INFO     | src.api.routes.chat:chat:90 - [chat] session=c41a3b25-917f-47bd-aa10-5a5b8506b1b6 centre=DAMBULLA message='mnwda me kiyanne'
+2026-08-20 16:32:17.277 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-20 16:32:17.278 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-20 16:32:22.446 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as out_of_scope (confidence=0.80)
+2026-08-20 16:32:22.447 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-20 16:32:25.554 | INFO     | src.api.routes.b2b:list_buyers:25 - [b2b/buyers] centre=DAMBULLA
+2026-08-20 16:32:25.555 | INFO     | src.api.routes.b2b:match_surplus:35 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-20 16:32:25.556 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-20 16:32:25.557 | INFO     | src.api.routes.b2b:match_surplus:35 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-20 16:32:25.557 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-20 16:32:25.577 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.579 | INFO     | src.api.routes.b2b:list_buyers:25 - [b2b/buyers] centre=DAMBULLA
+2026-08-20 16:32:25.581 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.583 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.584 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.585 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.586 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.587 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:25.589 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:26.590 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:26.610 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:26.633 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:26.657 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:27.102 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-20 16:32:27.110 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-20 16:32:27.110 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-20 16:32:27.123 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-20 16:32:27.123 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-20 16:32:27.124 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-20 16:32:29.192 | INFO     | src.api.routes.market:get_forecast:28 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-20 16:32:29.192 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-20 16:32:29.193 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:29.629 | INFO     | src.api.routes.market:get_forecast:28 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-20 16:32:29.629 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-20 16:32:29.726 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-20 16:32:46.739 | INFO     | src.api.routes.chat:chat:90 - [chat] session=199a1060-39ed-46a5-b8de-9dcb778e008c centre=DAMBULLA message='what can you help me with?'
+2026-08-20 16:32:47.853 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-20 16:32:47.853 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-20 16:32:47.854 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-20 16:32:51.924 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: direct (1.00)
+2026-08-20 16:32:51.924 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-20 16:33:14.659 | INFO     | src.api.routes.chat:chat:90 - [chat] session=199a1060-39ed-46a5-b8de-9dcb778e008c centre=DAMBULLA message='what can kind of tasks?'
+2026-08-20 16:33:21.083 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as out_of_scope (confidence=0.80)
+2026-08-20 16:33:21.083 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-22 08:17:03.959 | INFO     | src.api.main:_shutdown:126 - ASCA AI FastAPI server shutting down.
+2026-08-23 10:36:57.106 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 10:36:59.980 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 10:37:22.262 | INFO     | __main__:main:15 - Testing Market Scout Agent + Demand Supply Matcher Agent Pipeline...
+2026-08-23 10:37:22.263 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 10:37:30.199 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 10:37:30.199 | INFO     | __main__:main:19 - Step 1: Running MarketScoutAgent async parallel crop analysis...
+2026-08-23 10:37:30.199 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 4 crops concurrently for DAMBULLA...
+2026-08-23 10:37:30.593 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:37:31.357 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-23 10:37:31.544 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-23 10:37:31.595 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-23 10:37:31.987 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 10:37:31.987 | INFO     | __main__:main:32 - Step 2: Running DemandSupplyMatcherAgent ChromaDB + FEFO matching...
+2026-08-23 10:37:31.987 | INFO     | src.agents.matcher:match_surplus_crops_async:94 - DemandSupplyMatcherAgent matching 1 surplus anomalies concurrently...
+2026-08-23 10:37:31.987 | INFO     | src.agents.matcher:match_single_insight_async:27 - DemandSupplyMatcherAgent finding B2B buyers for tomato surplus at DAMBULLA (55.55 Tons)...
+2026-08-23 10:37:34.715 | INFO     | src.agents.matcher:match_surplus_crops_async:100 - DemandSupplyMatcherAgent generated 2 total B2B Match Recommendations.
+2026-08-23 10:37:34.715 | INFO     | __main__:main:35 - Matcher Agent returned 2 B2B Matches:
+2026-08-23 10:37:34.715 | INFO     | __main__:main:37 -  - Buyer: Lanka Canning & Sauce Ltd      | Crop: tomato     | Volume: 30.549999999999997 T | FEFO Score: 0.56
+2026-08-23 10:37:35.009 | INFO     | __main__:main:37 -  - Buyer: Central Province Canning Mills | Crop: tomato     | Volume: 25.0  T | FEFO Score: 0.67
+2026-08-23 10:48:42.002 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 10:48:47.118 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 10:48:47.119 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 10:49:07.292 | INFO     | src.api.routes.auth:register:76 - [auth] New user registered: admin@asca.ai (role=admin)
+2026-08-23 10:49:09.237 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 10:50:23.043 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 10:50:30.264 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 10:50:30.265 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 10:50:30.266 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 10:50:31.169 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 10:50:31.169 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 10:50:31.406 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:31.484 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:31.488 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:31.492 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:31.528 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 10:50:31.557 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.096 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.281 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.392 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.394 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.417 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.578 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:32.868 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 10:50:32.868 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 10:50:32.869 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 10:50:33.097 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:33.820 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 10:50:34.375 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 10:50:34.376 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 10:50:35.265 | INFO     | src.api.routes.market:get_forecast:32 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 10:50:35.265 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 10:50:35.561 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:36.692 | INFO     | src.api.routes.market:get_forecast:32 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 10:50:36.692 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 10:50:36.994 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:46.035 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 10:50:46.036 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 10:50:46.049 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 10:50:46.133 | INFO     | src.api.routes.b2b:match_surplus:42 - [b2b/match] centre=DAMBULLA crops=None
+2026-08-23 10:50:46.134 | INFO     | src.agents.market_scout:scout_market_parallel_async:114 - MarketScoutAgent scouting 6 crops concurrently for DAMBULLA...
+2026-08-23 10:50:46.254 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:46.259 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:46.513 | INFO     | src.api.routes.market:get_forecast:32 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 10:50:46.513 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 10:50:46.764 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:46.964 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.199 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.298 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.301 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for carrot at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.335 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.372 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for beans at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.481 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for eggplant at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:47.527 | INFO     | src.api.routes.b2b:list_buyers:29 - [b2b/buyers] centre=DAMBULLA
+2026-08-23 10:50:48.170 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:48.277 | INFO     | src.api.routes.market:get_forecast:32 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-23 10:50:48.278 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-23 10:50:48.279 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for cabbage at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:48.280 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for green_chilli at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:48.499 | WARNING  | src.agents.market_scout:fetch_historical_data_async:58 - Insufficient DB records for tomato at DAMBULLA. Using synthetic data.
+2026-08-23 10:50:48.772 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 10:50:48.772 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 10:50:48.772 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 10:50:48.773 | INFO     | src.agents.market_scout:scout_market_parallel_async:127 - MarketScoutAgent completed scouting for DAMBULLA: Detected 0 surplus anomalies.
+2026-08-23 10:50:48.773 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-23 10:50:48.773 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for DAMBULLA
+2026-08-23 11:15:38.841 | INFO     | src.api.routes.chat:chat:96 - [chat] session=fa2ef587-cfea-464e-b4bf-b805e8849dc4 centre=DAMBULLA message='what you can get from the web?'
+2026-08-23 11:15:38.841 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:15:40.479 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:15:42.403 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as out_of_scope (confidence=0.80)
+2026-08-23 11:15:42.403 | INFO     | src.agents.pipeline:guardrail_node:73 - Guardrail verdict OUT_OF_SCOPE -> short-circuiting pipeline
+2026-08-23 11:16:21.619 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:137 - Fast keyword match: IN_SCOPE (matches=3)
+2026-08-23 11:16:21.619 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: web_search (Matched 2 real-time information signal(s))
+2026-08-23 11:16:21.619 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'What is the latest USD to LKR exchange rate in Sri Lanka today?'
+2026-08-23 11:16:21.974 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-23 11:16:21.975 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'What is the latest USD to LKR exchange rate in Sri Lanka today?' (depth=basic, max_results=5)
+2026-08-23 11:16:24.173 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 5 results
+2026-08-23 11:16:24.173 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:16:24.598 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:16:55.805 | INFO     | src.api.routes.chat:chat:96 - [chat] session=fa2ef587-cfea-464e-b4bf-b805e8849dc4 centre=DAMBULLA message='What are the latest fertilizer subsidy updates in Sri Lanka?'
+2026-08-23 11:16:58.535 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.95)
+2026-08-23 11:16:58.535 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:16:58.536 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:17:01.540 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: web_search (0.80)
+2026-08-23 11:17:01.540 | INFO     | src.agents.direct_agent:handle_web_search:157 - DirectAgent route=web_search -> dispatching Tavily query: 'What are the latest fertilizer subsidy updates in Sri Lanka?'
+2026-08-23 11:17:01.544 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-23 11:17:01.544 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'What are the latest fertilizer subsidy updates in Sri Lanka?' (depth=basic, max_results=5)
+2026-08-23 11:17:14.147 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 5 results
+2026-08-23 11:17:14.147 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:17:14.147 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-23 11:20:43.187 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:20:47.676 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:20:50.691 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:20:50.691 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:20:50.792 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:20:54.787 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:20:58.169 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:20:58.170 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:21:38.655 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:21:38.657 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:21:38.658 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:21:38.664 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:21:40.885 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:21:40.889 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:21:45.306 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:21:50.482 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:21:54.546 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:21:54.546 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:22:11.090 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:22:15.803 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:22:19.213 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:22:19.213 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:22:46.088 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-23 11:22:51.470 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-23 11:22:55.951 | INFO     | src.infrastructure.db:init_db:25 - Database Tables Initialized successfully.
+2026-08-23 11:22:56.031 | INFO     | src.api.main:_startup:123 - ASCA AI FastAPI server started — all agents ready.
+2026-08-23 11:23:10.538 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:23:10.552 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-23 11:23:41.763 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-23 11:25:55.613 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
