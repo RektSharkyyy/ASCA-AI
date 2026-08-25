@@ -7,24 +7,24 @@ import { CENTERS } from '../../data/mockData';
 import { getChatSessions, deleteChatSession } from '../../api/client';
 
 const NAV_ITEMS = [
-  { id: 'chat',       label: '💬  AI Advisory Chat',       badge: null },
-  { id: 'analytics',  label: '📈  Price Forecast Curves',   badge: null },
-  { id: 'b2b',        label: '🤝  B2B Match Directory',     badge: '6'  },
-  { id: 'blueprints', label: '📄  Executive Blueprints',    badge: null },
-  { id: 'settings',   label: '⚙️  System Settings',         badge: null },
+  { id: 'chat', label: '💬  AI Advisory Chat', badge: null },
+  { id: 'analytics', label: '📈  Price Forecast Curves', badge: null },
+  { id: 'b2b', label: '🤝  B2B Match Directory', badge: '6' },
+  { id: 'blueprints', label: '📄  Executive Blueprints', badge: null },
+  { id: 'settings', label: '⚙️  System Settings', badge: null },
 ];
 
 function formatSessionDate(isoStr) {
   if (!isoStr) return '';
-  const d   = new Date(isoStr);
+  const d = new Date(isoStr);
   const now = new Date();
   const diffMs = now - d;
-  const diffH  = diffMs / 3600000;
-  const diffD  = diffMs / 86400000;
-  if (diffH  < 1)  return 'Just now';
-  if (diffH  < 24) return 'Today';
-  if (diffD  < 2)  return 'Yesterday';
-  if (diffD  < 7)  return d.toLocaleDateString('en-GB', { weekday: 'short' });
+  const diffH = diffMs / 3600000;
+  const diffD = diffMs / 86400000;
+  if (diffH < 1) return 'Just now';
+  if (diffH < 24) return 'Today';
+  if (diffD < 2) return 'Yesterday';
+  if (diffD < 7) return d.toLocaleDateString('en-GB', { weekday: 'short' });
   return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
 }
 
@@ -39,8 +39,8 @@ export default function Sidebar({
   onSessionDeleted,
   sessionsRefreshKey,
 }) {
-  const [sessions, setSessions]   = useState([]);
-  const [loading,  setLoading]    = useState(false);
+  const [sessions, setSessions] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [deletingId, setDeletingId] = useState(null);
 
   // Fetch sessions whenever the refresh key increments or component mounts

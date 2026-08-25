@@ -24,6 +24,7 @@ export default function App() {
   // Auth guard — show login page if not authenticated
   if (!isAuthenticated) return <LoginView />;
 
+
   const handleArtifact = (a) => {
     setArtifact(a);
     setPanelOpen(true);

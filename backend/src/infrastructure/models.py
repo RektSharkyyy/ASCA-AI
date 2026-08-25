@@ -85,3 +85,30 @@ class ChatHistoryModel(Base):
     created_at   = Column(DateTime, default=datetime.utcnow, index=True)
 
     user = relationship("UserModel", backref="chat_logs")
+
+
+class B2BQuotaOfferModel(Base):
+    """Stores B2B quota allocation offers and agreements bound to the creator user_id."""
+    __tablename__ = "b2b_quota_offers"
+
+    id                  = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    user_id             = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False, index=True)
+    centre_id           = Column(String(50), nullable=False, index=True)
+    buyer_code          = Column(String(50), nullable=False, index=True)
+    buyer_name          = Column(String(150), nullable=False)
+    buyer_location      = Column(String(150), nullable=True)
+    crop_name           = Column(String(100), nullable=False, index=True)
+    crop_grade          = Column(String(100), default="Grade A (Processing Quality)")
+    total_surplus_tons  = Column(Float, nullable=False, default=25.0)
+    allocated_quota_tons = Column(Float, nullable=False)
+    offered_price_per_kg = Column(Float, nullable=False)
+    delivery_deadline   = Column(String(50), nullable=False)
+    shelf_life_days     = Column(Integer, default=4)
+    distance_km         = Column(Float, default=100.0)
+    fefo_score          = Column(Float, default=0.85)
+    status              = Column(String(50), default="OFFER_SENT", index=True)  # DRAFT | OFFER_SENT | ACCEPTED | CONTRACTED | REJECTED
+    notes               = Column(Text, nullable=True)
+    created_at          = Column(DateTime, default=datetime.utcnow, index=True)
+    updated_at          = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    user = relationship("UserModel", backref="quota_offers")

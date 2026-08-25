@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Cpu, Wifi, Bell, Radio, Database, Key } from 'lucide-react';
+import { Cpu, Bell, Radio, Key, LogOut, User } from 'lucide-react';
 import { BROADCAST_LOGS } from '../data/mockData';
+import { useAuth } from '../auth/AuthContext';
 
 function Toggle({ value, onChange }) {
   return (
@@ -11,6 +12,7 @@ function Toggle({ value, onChange }) {
 }
 
 export default function SettingsView() {
+  const { user, logout } = useAuth();
   const [settings, setSettings] = useState({
     sms: true,
     whatsapp: true,
@@ -25,8 +27,8 @@ export default function SettingsView() {
   return (
     <div className="settings-view">
       <div>
-        <div className="view-title">⚙️ System Settings & Broadcast Logs</div>
-        <div className="view-subtitle" style={{ marginTop: 4 }}>Real-time Telegram delivery trackers & agent configuration</div>
+        <div className="view-title">⚙️ System Settings &amp; Broadcast Logs</div>
+        <div className="view-subtitle" style={{ marginTop: 4 }}>Real-time Telegram delivery trackers &amp; agent configuration</div>
       </div>
 
       {/* Agent Config */}
@@ -86,7 +88,7 @@ export default function SettingsView() {
 
       {/* API keys */}
       <div className="settings-card">
-        <div className="settings-card-title"><Key size={14} /> API & Integration Keys</div>
+        <div className="settings-card-title"><Key size={14} /> API &amp; Integration Keys</div>
         {[
           { label: 'OpenRouter API Key', val: 'sk-or-v1-••••••••••••••3a8f' },
           { label: 'Telegram Bot Token', val: '7412••••••:AAF••••••••••Bk8' },
@@ -97,6 +99,29 @@ export default function SettingsView() {
             <span className="font-mono" style={{ fontSize: 12, color: 'var(--text-muted)' }}>{row.val}</span>
           </div>
         ))}
+      </div>
+
+      {/* ── Account & Logout ── */}
+      <div className="settings-card settings-logout-card">
+        <div className="settings-card-title"><User size={14} /> Account</div>
+        <div className="settings-logout-row">
+          <div className="settings-user-info">
+            <div className="settings-user-avatar">
+              {user?.full_name?.charAt(0)?.toUpperCase() || user?.email?.charAt(0)?.toUpperCase() || '?'}
+            </div>
+            <div>
+              <div className="settings-user-name">{user?.full_name || 'User'}</div>
+              <div className="settings-user-email">{user?.email}</div>
+              <div className="settings-user-role">
+                {user?.role === 'admin' ? '🔑 Administrator' : '👁 Viewer'}
+              </div>
+            </div>
+          </div>
+          <button className="settings-logout-btn" onClick={logout}>
+            <LogOut size={15} />
+            Sign Out
+          </button>
+        </div>
       </div>
     </div>
   );

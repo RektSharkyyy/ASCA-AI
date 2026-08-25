@@ -20,7 +20,9 @@ def get_llm(provider: Optional[str] = None, model_name: Optional[str] = None, te
             openai_api_base="https://openrouter.ai/api/v1",
             temperature=temperature,
             max_tokens=600,
-            request_timeout=25.0,
+            timeout=10.0,
+            request_timeout=10.0,
+            max_retries=1,
         )
 
     elif provider == "openai":

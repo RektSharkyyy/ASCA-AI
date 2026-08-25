@@ -105,6 +105,34 @@ export const getB2BMatches = (centreId, crops = null) =>
     body: JSON.stringify({ centre_id: centreId, crops }),
   });
 
+/** Create a new B2B Quota offer / supply agreement. */
+export const createQuotaOffer = (data) =>
+  request('/b2b/quotas', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  });
+
+/** List all active and archived quota offers for the current user. */
+export const getQuotaOffers = (centreId = null, statusFilter = null) => {
+  const params = new URLSearchParams();
+  if (centreId) params.append('centre_id', centreId);
+  if (statusFilter) params.append('status_filter', statusFilter);
+  const q = params.toString() ? `?${params.toString()}` : '';
+  return request(`/b2b/quotas${q}`);
+};
+
+/** Update the lifecycle status of a quota offer. */
+export const updateQuotaStatus = (quotaId, status, notes = null) =>
+  request(`/b2b/quotas/${quotaId}/status`, {
+    method: 'PATCH',
+    body: JSON.stringify({ status, notes }),
+  });
+
+/** Delete a quota offer. */
+export const deleteQuotaOffer = (quotaId) =>
+  request(`/b2b/quotas/${quotaId}`, { method: 'DELETE' });
+
+
 // --------------------------------------------------------------------------- //
 // Market Price Sync (Scraper)
 // --------------------------------------------------------------------------- //

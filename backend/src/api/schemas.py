@@ -231,6 +231,62 @@ class B2BMatchResponse(BaseModel):
 
 
 # --------------------------------------------------------------------------- #
+# B2B Quota Allocation & Agreement Schemas
+# --------------------------------------------------------------------------- #
+class B2BQuotaCreate(BaseModel):
+    centre_id: str = "DAMBULLA"
+    buyer_code: str
+    buyer_name: str
+    buyer_location: Optional[str] = None
+    crop_name: str
+    crop_grade: str = "Grade A (Processing Quality)"
+    total_surplus_tons: float = 25.0
+    allocated_quota_tons: float
+    offered_price_per_kg: float
+    delivery_deadline: str
+    shelf_life_days: int = 4
+    distance_km: float = 100.0
+    fefo_score: float = 0.85
+    status: str = "OFFER_SENT"  # DRAFT | OFFER_SENT | ACCEPTED | CONTRACTED | REJECTED
+    notes: Optional[str] = None
+
+
+class B2BQuotaUpdateStatus(BaseModel):
+    status: str  # DRAFT | OFFER_SENT | ACCEPTED | CONTRACTED | REJECTED
+    notes: Optional[str] = None
+
+
+class B2BQuotaOut(BaseModel):
+    id: int
+    user_id: int
+    centre_id: str
+    buyer_code: str
+    buyer_name: str
+    buyer_location: Optional[str] = None
+    crop_name: str
+    crop_grade: str
+    total_surplus_tons: float
+    allocated_quota_tons: float
+    offered_price_per_kg: float
+    delivery_deadline: str
+    shelf_life_days: int
+    distance_km: float
+    fefo_score: float
+    status: str
+    notes: Optional[str] = None
+    created_at: datetime
+    updated_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+
+class B2BQuotaListResponse(BaseModel):
+    total: int
+    quotas: List[B2BQuotaOut]
+
+
+# --------------------------------------------------------------------------- #
 # Scraper / Market Price Sync Schemas
 # --------------------------------------------------------------------------- #
 class SyncPricesRequest(BaseModel):

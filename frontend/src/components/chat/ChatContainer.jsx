@@ -91,7 +91,13 @@ export default function ChatContainer({
       setMessages(m => [...m, agentMsg]);
 
       if (data.chart) {
-        onArtifact?.({ type: 'chart', crop: data.chart.crop, data: data.chart.data });
+        onArtifact?.({
+          type: 'chart',
+          crop: data.chart.crop,
+          data: data.chart.data,
+          analysisText: data.answer,
+          centre: activeCenter,
+        });
       }
 
       // Notify App.jsx so Sidebar refreshes Recent Sessions

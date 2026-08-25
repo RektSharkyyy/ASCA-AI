@@ -6,7 +6,7 @@
  */
 
 import { createContext, useContext, useState, useCallback, useEffect } from 'react';
-import { loginUser, getMe, refreshToken as apiRefreshToken } from '../api/client';
+import { loginUser, getMe } from '../api/client';
 
 const AuthContext = createContext(null);
 
@@ -15,16 +15,24 @@ const REFRESH_KEY = 'asca_refresh_token';
 const USER_KEY    = 'asca_user';
 
 export function AuthProvider({ children }) {
+  // Initialise user directly from localStorage — no async blocking
   const [user,    setUser]    = useState(() => {
-    try { return JSON.parse(localStorage.getItem(USER_KEY)) || null; } catch { return null; }
+    try {
+      const token  = localStorage.getItem(TOKEN_KEY);
+      const cached = JSON.parse(localStorage.getItem(USER_KEY));
+      return token && cached ? cached : null;
+    } catch {
+      return null;
+    }
   });
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState(null);
 
-  const isAuthenticated = !!user && !!localStorage.getItem(TOKEN_KEY);
+  // isAuthenticated is pure React state — every setUser() triggers a re-render
+  const isAuthenticated = !!user;
 
   // -------------------------------------------------------------------------
-  // login(email, password) → stores tokens + user in localStorage
+  // login(email, password) → stores tokens + user in localStorage + state
   // -------------------------------------------------------------------------
   const login = useCallback(async (email, password) => {
     setLoading(true);
@@ -39,7 +47,7 @@ export function AuthProvider({ children }) {
         role:      data.role,
       };
       localStorage.setItem(USER_KEY, JSON.stringify(profile));
-      setUser(profile);
+      setUser(profile);   // immediately shows dashboard
       return { success: true };
     } catch (err) {
       setError(err.message);
@@ -50,7 +58,7 @@ export function AuthProvider({ children }) {
   }, []);
 
   // -------------------------------------------------------------------------
-  // logout() → clears everything from localStorage
+  // logout() → clears everything + replaces history so back button is blocked
   // -------------------------------------------------------------------------
   const logout = useCallback(() => {
     localStorage.removeItem(TOKEN_KEY);
@@ -58,22 +66,34 @@ export function AuthProvider({ children }) {
     localStorage.removeItem(USER_KEY);
     setUser(null);
     setError(null);
+    // Replace the current history entry so the browser back button
+    // cannot navigate back to the authenticated dashboard
+    window.history.replaceState(null, '', window.location.href);
   }, []);
 
   // -------------------------------------------------------------------------
-  // On mount: verify the stored token is still valid
+  // On mount: silently validate the stored token in the background.
+  // We already trusted localStorage above — if the token is expired the
+  // server will return 401 and we force-logout the user.
   // -------------------------------------------------------------------------
   useEffect(() => {
     const token = localStorage.getItem(TOKEN_KEY);
-    if (!token) return;
+    if (!token) return;   // no token → nothing to validate
+
     getMe()
-      .then(profile => setUser({
-        email:     profile.email,
-        full_name: profile.full_name,
-        role:      profile.role,
-      }))
-      .catch(() => logout());   // token expired or invalid → force logout
-  }, [logout]);
+      .then(profile => {
+        // Refresh user profile in case role/name changed server-side
+        setUser({
+          email:     profile.email,
+          full_name: profile.full_name,
+          role:      profile.role,
+        });
+      })
+      .catch(() => {
+        // Token expired or invalid → logout silently
+        logout();
+      });
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <AuthContext.Provider value={{ user, isAuthenticated, loading, error, login, logout }}>
