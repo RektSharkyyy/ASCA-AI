@@ -140,7 +140,7 @@ export default function ChatContainer({
         )}
 
         {messages.map(m => (
-          <MessageBubble key={m.id} msg={m} onAction={handleAction} />
+          <MessageBubble key={m.id} msg={m} onAction={handleAction} activeCenter={activeCenter} />
         ))}
 
         {thinking && (

@@ -2021,3 +2021,421 @@ body {
   from { opacity: 0; transform: translateY(-6px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+/* ═══════════════════════════════════════════════════
+   CULTIVATION & AGRONOMY PLANNER VIEW
+═══════════════════════════════════════════════════ */
+.cult-view {
+  flex: 1; overflow-y: auto; padding: 20px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+
+/* ── Farm Setup Panel ── */
+.cult-setup-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+.cult-setup-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+}
+.cult-setup-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.cult-field { display: flex; flex-direction: column; gap: 5px; }
+.cult-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.cult-static-val {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 7px 10px;
+  background: var(--accent-dim);
+  border-radius: 7px;
+  border: 1px solid rgba(56,189,248,0.2);
+}
+.cult-select, .cult-input {
+  padding: 7px 10px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-size: 12px;
+  outline: none;
+  transition: var(--transition);
+}
+.cult-select:focus, .cult-input:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 2px rgba(52,211,153,0.15);
+}
+.cult-input { width: 80px; }
+.cult-unit { font-size: 11px; color: var(--text-muted); font-weight: 600; }
+
+.cult-recommend-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--green) 0%, #22c55e 100%);
+  color: #080c14;
+  font-size: 12.5px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cult-recommend-btn:hover:not(:disabled) {
+  box-shadow: 0 0 20px rgba(52,211,153,0.4);
+  transform: translateY(-1px);
+}
+.cult-recommend-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* ── Results Header ── */
+.cult-results-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--green);
+  padding: 10px 14px;
+  background: var(--green-dim);
+  border: 1px solid rgba(52,211,153,0.25);
+  border-radius: var(--radius);
+}
+
+/* ── Recommendation Cards Grid ── */
+.cult-rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+}
+.cult-rec-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  transition: var(--transition);
+}
+.cult-rec-card:hover {
+  border-color: var(--green);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35), 0 0 0 1px rgba(52,211,153,0.12);
+  transform: translateY(-2px);
+}
+.rec-rank {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+.rec-emoji { font-size: 30px; line-height: 1; }
+.rec-name { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+.rec-sub { font-size: 11px; color: var(--text-muted); margin-top: -6px; font-style: italic; }
+
+
+.rec-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.rec-badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 99px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+.rec-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding: 8px;
+  background: var(--bg-surface);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.rec-metric { display: flex; flex-direction: column; gap: 1px; font-size: 10.5px; }
+.rec-metric .k { color: var(--text-muted); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.03em; }
+.rec-metric .v { font-weight: 700; color: var(--text-primary); }
+.rec-metric .v.accent { color: var(--accent); }
+.rec-metric .v.green  { color: var(--green); }
+
+.rec-financials {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 8px;
+  background: linear-gradient(135deg, rgba(52,211,153,0.06) 0%, rgba(56,189,248,0.06) 100%);
+  border: 1px solid rgba(52,211,153,0.2);
+  border-radius: 8px;
+}
+.fin-label { font-size: 9.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.03em; }
+.fin-val { font-size: 12px; font-weight: 700; color: var(--text-primary); margin-top: 2px; }
+.fin-val.green  { color: var(--green); }
+.fin-val.accent { color: var(--accent); }
+.fin-div { width: 1px; height: 24px; background: var(--border); }
+
+.cult-view-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid rgba(52,211,153,0.4);
+  background: var(--green-dim);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 4px;
+}
+.cult-view-btn:hover {
+  background: var(--green);
+  color: #080c14;
+  box-shadow: 0 0 14px rgba(52,211,153,0.3);
+}
+
+/* ── Cultivation Guide Modal ── */
+.cult-guide-modal {
+  width: 100%;
+  max-width: 840px;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(52,211,153,0.1);
+  overflow: hidden;
+  animation: fadeIn 0.15s ease;
+}
+.cult-guide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.cult-guide-crop-id {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.crop-emoji-lg { font-size: 28px; }
+.cult-guide-crop-name { font-size: 15px; font-weight: 700; color: var(--text-primary); }
+.cult-guide-crop-sub  { font-size: 10.5px; color: var(--text-muted); margin-top: 2px; }
+
+.cult-pdf-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 7px;
+  border: 1px solid var(--green);
+  background: var(--green-dim);
+  color: var(--green);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cult-pdf-btn:hover { background: var(--green); color: #080c14; }
+
+.cult-guide-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 10px 18px 0;
+  background: var(--bg-elevated);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.cult-tab {
+  padding: 8px 14px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 6px 6px 0 0;
+}
+.cult-tab:hover { color: var(--text-primary); }
+.cult-tab.active {
+  color: var(--green);
+  border-bottom-color: var(--green);
+  background: rgba(52,211,153,0.06);
+}
+
+.cult-guide-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 18px 20px;
+}
+
+/* ── Timeline Accordion ── */
+.cult-timeline { display: flex; flex-direction: column; gap: 6px; }
+.cult-stage-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.cult-stage-block.expanded { border-color: var(--green); }
+.cult-stage-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cult-stage-header:hover { background: var(--bg-card-hover); }
+.stage-num {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--green);
+  background: var(--green-dim);
+  padding: 2px 7px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+.stage-title { font-size: 12.5px; font-weight: 700; color: var(--text-primary); flex: 1; }
+.stage-weeks { font-size: 11px; color: var(--accent); font-weight: 600; white-space: nowrap; }
+
+.cult-stage-actions {
+  list-style: none;
+  padding: 12px 16px;
+  background: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.cult-stage-actions li {
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 8px;
+  line-height: 1.5;
+}
+.stage-bullet {
+  color: var(--green);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Fertilizer Schedule ── */
+.cult-fertilizer { display: flex; flex-direction: column; gap: 16px; }
+.fert-section {}
+.fert-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.fert-timing { font-size: 10.5px; color: var(--text-muted); font-weight: 400; }
+.fert-table-wrap { overflow-x: auto; }
+.fert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11.5px;
+}
+.fert-table th {
+  background: var(--bg-elevated);
+  color: var(--green);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 7px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+.fert-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+.fert-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+.fert-name { font-weight: 600; color: var(--text-primary) !important; }
+.fert-qty  { color: var(--amber) !important; font-weight: 600; }
+.fert-method { color: var(--text-muted) !important; font-size: 10.5px; }
+
+/* ── Pest & Disease Shield ── */
+.cult-pest-list { display: flex; flex-direction: column; gap: 8px; }
+.pest-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.pest-block.open { border-color: var(--border-active); }
+.pest-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.pest-header:hover { background: var(--bg-card-hover); }
+.pest-type-badge { font-size: 10px; font-weight: 700; white-space: nowrap; }
+.pest-name { font-size: 12.5px; font-weight: 700; color: var(--text-primary); }
+.pest-sub { font-size: 10.5px; color: var(--text-muted); margin-top: 1px; font-style: italic; }
+
+
+.pest-detail {
+  background: var(--bg-surface);
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pest-section { display: flex; flex-direction: column; gap: 4px; }
+.plabel { font-size: 10.5px; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+.ptext { font-size: 11.5px; color: var(--text-secondary); line-height: 1.6; }
+.pest-section.organic .plabel  { color: var(--green); }
+.pest-section.chemical .plabel { color: var(--accent); }
+.pest-section.symptoms .plabel { color: var(--amber); }
+

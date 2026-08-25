@@ -1027,3 +1027,400 @@ export function generateB2BContractPDF(quota) {
 }
 
 
+// ───────────────────────────────────────────────────────────────────────────
+// 6-MONTH CULTIVATION GUIDE PDF GENERATOR
+// ───────────────────────────────────────────────────────────────────────────
+
+/**
+ * Generates a printable 6-Month Crop Cultivation Agronomy Booklet PDF.
+ * Includes: Farm parameters, DOA cultivation timeline, fertilizer schedule,
+ * and pest & disease management protocols.
+ */
+export function generateCultivationGuidePDF(guide, farmParams) {
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  const pageW   = doc.internal.pageSize.getWidth();
+  const pageH   = doc.internal.pageSize.getHeight();
+  const mL = 14, mR = 14;
+  const cW = pageW - mL - mR;
+  const cropName = guide.name || 'Crop';
+  const season   = farmParams?.season || 'Maha';
+  const centre   = farmParams?.centre_id === 'THAMBUTHTHEGAMA' ? 'Thambuththegama' : 'Dambulla';
+  const acres    = farmParams?.land_area_acres || 1.0;
+  const docId    = `ASCA-CULT-${new Date().toISOString().slice(0,10).replace(/-/g,'')}-${cropName.replace(/[^a-zA-Z]/g,'').toUpperCase().slice(0,6)}`;
+
+  // ─── 1. COVER HEADER ───────────────────────────────────────────────────
+  setColor(doc, C.navy, 'fill');
+  doc.rect(0, 0, pageW, 48, 'F');
+  setColor(doc, C.green, 'fill');
+  doc.rect(0, 0, 4, 48, 'F');
+
+  // Crop emoji box
+  setColor(doc, C.elevated, 'fill');
+  doc.roundedRect(10, 7, 24, 24, 3, 3, 'F');
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(16);
+  doc.text(guide.emoji || '🌱', 22, 21, { align: 'center' });
+
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(16);
+  setColor(doc, C.primary);
+  doc.text(`ASCA AI — ${cropName} Cultivation Guide`, 38, 17);
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(7.5);
+  setColor(doc, C.secondary);
+  doc.text(`DOA-Aligned Agronomy Booklet · ${guide.botanical_name || cropName} · ${season} Season · ${centre} Economic Centre`, 38, 23);
+  doc.text(`Growth Duration: ${guide.growth_days} Days · Ideal pH: ${guide.ideal_ph} · Spacing: ${guide.plant_spacing_cm} cm`, 38, 29);
+
+  // Ref + season badge
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(7);
+  setColor(doc, C.green);
+  doc.text(`${season.toUpperCase()} SEASON`, pageW - mR, 13, { align: 'right' });
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(7);
+  setColor(doc, C.muted);
+  doc.text(`Ref: ${docId}`, pageW - mR, 19, { align: 'right' });
+  doc.text(`${acres} Acre${acres !== 1 ? 's' : ''} · ${centre}`, pageW - mR, 25, { align: 'right' });
+
+  // ─── 2. QUICK STATS ROW ────────────────────────────────────────────────
+  setColor(doc, C.surface, 'fill');
+  doc.rect(0, 48, pageW, 22, 'F');
+  const stats = [
+    ['Water Need',    guide.water_requirement || 'Moderate'],
+    ['Market Demand', guide.market_demand || 'High'],
+    ['Risk Level',    guide.risk_level || 'Medium'],
+    ['Yield/Acre',    `${guide.yield_per_acre_tons_min}–${guide.yield_per_acre_tons_max} T`],
+    ['Avg Price',     `Rs. ${guide.avg_wholesale_price_lkr_per_kg}/kg`],
+    ['Est. ROI',      `${guide.roi_estimate_pct}%`],
+  ];
+  const scW = cW / stats.length;
+  stats.forEach(([k, v], i) => {
+    const x = mL + i * scW;
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(6.5);
+    setColor(doc, C.muted);
+    doc.text(k, x, 56);
+    doc.setFont('helvetica', 'bold');
+    doc.setFontSize(8);
+    setColor(doc, C.accent);
+    doc.text(v, x, 62);
+  });
+
+  setColor(doc, C.elevated, 'fill');
+  doc.rect(0, 70, pageW, 0.5, 'F');
+
+  let curY = 78;
+
+  // ─── 3. CULTIVATION TIMELINE ───────────────────────────────────────────
+  curY = sectionHeading(doc, '1. Step-by-Step Cultivation Timeline (6 Stages)', curY, pageW, mL);
+  curY += 2;
+
+  const stageRows = (guide.timeline_stages || []).map(s => [
+    `Stage ${s.stage}: ${s.name}`,
+    s.weeks,
+    s.actions.join('\n'),
+  ]);
+
+  autoTable(doc, {
+    startY: curY,
+    margin: { left: mL, right: mR },
+    head: [['Stage & Activity', 'Timeline', 'Recommended Actions & Cultural Practices']],
+    body: stageRows,
+    styles: { fontSize: 7, cellPadding: 2, textColor: C.primary, fillColor: C.surface, lineColor: C.elevated, lineWidth: 0.3 },
+    headStyles: { fillColor: C.elevated, textColor: C.green, fontStyle: 'bold', fontSize: 7.5 },
+    alternateRowStyles: { fillColor: [15, 22, 35] },
+    columnStyles: { 0: { cellWidth: 38, fontStyle: 'bold' }, 1: { cellWidth: 22 }, 2: { cellWidth: cW - 60 } },
+  });
+  curY = doc.lastAutoTable.finalY + 8;
+
+  // ─── 4. FERTILIZER SCHEDULE ─────────────────────────────────────────────
+  if (curY > pageH - 60) { doc.addPage(); curY = 18; }
+  curY = sectionHeading(doc, '2. DOA-Approved Fertilizer & Nutrition Schedule (Per Acre)', curY, pageW, mL);
+  curY += 2;
+
+  const fertRows = [];
+  const fertSchedule = guide.fertilizer_schedule || {};
+  Object.entries(fertSchedule).forEach(([phaseKey, phase]) => {
+    const phaseLabel = phaseKey === 'basal' ? 'Basal Dressing'
+      : phaseKey === 'top_dressing_1' ? 'Top Dressing 1'
+      : phaseKey === 'top_dressing_2' ? 'Top Dressing 2'
+      : 'Top Dressing 3';
+    (phase.inputs || []).forEach((inp, idx) => {
+      fertRows.push([
+        idx === 0 ? `${phaseLabel}\n(${phase.timing})` : '',
+        inp.name,
+        inp.quantity,
+        inp.method,
+      ]);
+    });
+  });
+
+  autoTable(doc, {
+    startY: curY,
+    margin: { left: mL, right: mR },
+    head: [['Application Phase', 'Fertilizer / Nutrient Input', 'Quantity per Acre', 'Method']],
+    body: fertRows,
+    styles: { fontSize: 7, cellPadding: 2, textColor: C.primary, fillColor: C.surface, lineColor: C.elevated, lineWidth: 0.3 },
+    headStyles: { fillColor: C.elevated, textColor: C.green, fontStyle: 'bold', fontSize: 7.5 },
+    alternateRowStyles: { fillColor: [15, 22, 35] },
+    columnStyles: { 0: { cellWidth: 38, fontStyle: 'bold' }, 2: { cellWidth: 30 } },
+  });
+  curY = doc.lastAutoTable.finalY + 8;
+
+  // ─── 5. PEST & DISEASE MANAGEMENT ──────────────────────────────────────
+  if (curY > pageH - 60) { doc.addPage(); curY = 18; }
+  curY = sectionHeading(doc, '3. Integrated Pest & Disease Management (IPM) Shield', curY, pageW, mL);
+  curY += 2;
+
+  const pestRows = (guide.pests_and_diseases || []).map(p => [
+    `${p.type === 'pest' ? '🐛 Pest' : '🦠 Disease'}\n${p.name}${p.category ? `\n[${p.category}]` : ''}`,
+    p.symptoms,
+    p.organic_control,
+    p.chemical_control,
+  ]);
+
+  autoTable(doc, {
+    startY: curY,
+    margin: { left: mL, right: mR },
+    head: [['Pest / Disease', 'Identification & Symptoms', 'Organic / Cultural Control', 'Approved IPM Treatment']],
+    body: pestRows,
+    styles: { fontSize: 6.5, cellPadding: 2, textColor: C.primary, fillColor: C.surface, lineColor: C.elevated, lineWidth: 0.3 },
+    headStyles: { fillColor: C.elevated, textColor: C.green, fontStyle: 'bold', fontSize: 7 },
+    alternateRowStyles: { fillColor: [15, 22, 35] },
+    columnStyles: { 0: { cellWidth: 34, fontStyle: 'bold' } },
+  });
+  curY = doc.lastAutoTable.finalY + 8;
+
+  // ─── 6. FOOTER ─────────────────────────────────────────────────────────
+  const totalPages = doc.internal.getNumberOfPages();
+  for (let i = 1; i <= totalPages; i++) {
+    doc.setPage(i);
+    const fY = pageH - 12;
+    setColor(doc, C.elevated, 'fill');
+    doc.rect(0, fY - 3, pageW, 0.5, 'F');
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(6.5);
+    setColor(doc, C.muted);
+    doc.text(`ASCA AI Agronomy Guide · ${cropName} · DOA Sri Lanka Validated Protocols`, mL, fY + 1);
+    doc.text(`Page ${i} of ${totalPages}`, pageW - mR, fY + 1, { align: 'right' });
+    doc.text(`Generated: ${nowFormatted()} · Ref: ${docId}`, mL, fY + 5);
+  }
+
+  // ─── 7. SAVE ───────────────────────────────────────────────────────────
+  const safeCrop = cropName.replace(/[^a-zA-Z0-9]/g, '_');
+  doc.save(`ASCA_CultivationGuide_${safeCrop}_${season}.pdf`);
+}
+
+/**
+ * Generates an official, publication-ready PDF for any chat advisory output.
+ * @param {object} msg               - The message object containing .text, .chart, .time
+ * @param {object} [opts]            - { activeCenter = 'DAMBULLA', title }
+ */
+export function generateChatAdvisoryPDF(msg, opts = {}) {
+  const text = (msg?.text || '').trim();
+  if (!text) return;
+
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  const pageW = doc.internal.pageSize.getWidth();
+  const pageH = doc.internal.pageSize.getHeight();
+  const mL = 14;
+  const mR = 14;
+  const cW = pageW - mL - mR;
+
+  const centre = opts.activeCenter || 'DAMBULLA';
+  const centreLabel = centre === 'DAMBULLA' ? 'Dambulla Economic Centre' : 'Thambuththegama Economic Centre';
+  const docId = 'ADV-' + Date.now().toString(36).toUpperCase();
+
+  // Try to determine main title from first line
+  const lines = text.split('\n');
+  let firstLine = lines[0].replace(/[#*`_]/g, '').trim();
+  const advisoryTitle = firstLine.length > 5 && firstLine.length < 80 ? firstLine : (opts.title || 'Executive Advisory & Agronomy Dossier');
+
+  // ─── 1. HEADER BAR ───────────────────────────────────────────────────────
+  setColor(doc, C.navy, 'fill');
+  doc.rect(0, 0, pageW, 40, 'F');
+
+  // Accent stripe
+  setColor(doc, C.accent, 'fill');
+  doc.rect(0, 0, 4, 40, 'F');
+
+  // Logo mark
+  setColor(doc, C.accent, 'fill');
+  doc.circle(21, 15, 4.5, 'F');
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(6.5);
+  setColor(doc, C.navy);
+  doc.text('AI', 19.8, 16);
+
+  // Platform title
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(15);
+  setColor(doc, C.primary);
+  doc.text('ASCA AI', 29, 14.5);
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(7.5);
+  setColor(doc, C.secondary);
+  doc.text('Agricultural Supply Chain & Agronomy Advisory Dossier', 29, 20.5);
+
+  // Document Badge
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(8);
+  setColor(doc, C.green);
+  doc.text('OFFICIAL ADVISORY', pageW - mR, 12, { align: 'right' });
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(7);
+  setColor(doc, C.muted);
+  doc.text(`Ref: ${docId}`, pageW - mR, 18, { align: 'right' });
+  doc.text(`${centreLabel}`, pageW - mR, 24, { align: 'right' });
+
+  // ─── 2. SUB-HEADER METADATA ROW ──────────────────────────────────────────
+  setColor(doc, C.surface, 'fill');
+  doc.rect(0, 40, pageW, 14, 'F');
+
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(8.5);
+  setColor(doc, C.primary);
+  doc.text(advisoryTitle, mL, 49);
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(7);
+  setColor(doc, C.secondary);
+  doc.text(`Generated: ${nowFormatted()}`, pageW - mR, 49, { align: 'right' });
+
+  setColor(doc, C.elevated, 'fill');
+  doc.rect(0, 54, pageW, 0.5, 'F');
+
+  let curY = 62;
+
+  // ─── 3. PARSE CONTENT SECTIONS & BLOCKS ──────────────────────────────────
+  // Group content into structured paragraphs / sections
+  const rawSections = [];
+  let currentSec = { heading: null, items: [] };
+
+  lines.forEach((line) => {
+    const trimmed = line.trim();
+    if (!trimmed) return;
+
+    // Check if line is a header (### or **Section**)
+    if (trimmed.startsWith('#') || (trimmed.startsWith('**') && trimmed.endsWith('**') && !trimmed.includes(':'))) {
+      if (currentSec.heading || currentSec.items.length > 0) {
+        rawSections.push(currentSec);
+      }
+      currentSec = {
+        heading: trimmed.replace(/^[#*]+|[#*]+$/g, '').trim(),
+        items: []
+      };
+    } else {
+      currentSec.items.push(trimmed);
+    }
+  });
+  if (currentSec.heading || currentSec.items.length > 0) {
+    rawSections.push(currentSec);
+  }
+
+  // Render each section
+  rawSections.forEach((sec, sIdx) => {
+    if (curY > pageH - 45) {
+      doc.addPage();
+      curY = 20;
+    }
+
+    if (sec.heading) {
+      curY = sectionHeading(doc, sec.heading, curY, pageW, mL);
+      curY += 2;
+    }
+
+    // Process items in this section
+    const tableRows = [];
+    const plainParagraphs = [];
+
+    sec.items.forEach(item => {
+      // Check if it's a bullet point with key-value format (e.g. * **Urea:** 25 kg)
+      const bulletMatch = item.match(/^[*•-]\s+\*\*([^*]+)\*\*[:\s]*(.*)$/);
+      if (bulletMatch) {
+        tableRows.push([bulletMatch[1].trim(), bulletMatch[2].trim() || '—']);
+      } else if (item.startsWith('*') || item.startsWith('-') || item.startsWith('•')) {
+        plainParagraphs.push('•  ' + item.replace(/^[*•-]\s*/, '').replace(/[*_]/g, ''));
+      } else {
+        plainParagraphs.push(item.replace(/[*_]/g, ''));
+      }
+    });
+
+    if (tableRows.length > 0) {
+      autoTable(doc, {
+        startY: curY,
+        margin: { left: mL, right: mR },
+        body: tableRows,
+        styles: { fontSize: 7.5, cellPadding: 2.2, textColor: C.primary, fillColor: C.surface, lineColor: C.elevated, lineWidth: 0.3 },
+        alternateRowStyles: { fillColor: [15, 22, 35] },
+        columnStyles: { 0: { cellWidth: 46, fontStyle: 'bold', textColor: C.accent }, 1: { cellWidth: cW - 46 } },
+      });
+      curY = doc.lastAutoTable.finalY + 4;
+    }
+
+    if (plainParagraphs.length > 0) {
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(7.5);
+      setColor(doc, C.secondary);
+      plainParagraphs.forEach(p => {
+        if (curY > pageH - 25) { doc.addPage(); curY = 20; }
+        const splitText = doc.splitTextToSize(p, cW);
+        doc.text(splitText, mL, curY);
+        curY += (splitText.length * 3.8) + 1.5;
+      });
+    }
+
+    curY += 3;
+  });
+
+  // ─── 4. OPTIONAL 14-DAY FORECAST TABLE IF CHART ATTACHED ─────────────────
+  if (msg?.chart?.data?.length) {
+    if (curY > pageH - 65) { doc.addPage(); curY = 20; }
+    curY = sectionHeading(doc, `📈 14-Day Price Forecast Series (${msg.chart.crop || 'Crop'})`, curY, pageW, mL);
+    curY += 2;
+
+    const chartRows = msg.chart.data.map(d => [
+      d.date,
+      d.actual !== null && d.actual !== undefined ? `LKR ${Number(d.actual).toFixed(2)}` : '—',
+      d.forecast !== null && d.forecast !== undefined ? `LKR ${Number(d.forecast).toFixed(2)}` : '—',
+    ]);
+
+    autoTable(doc, {
+      startY: curY,
+      margin: { left: mL, right: mR },
+      head: [['Date', 'Observed Wholesale Price', 'Prophet Predicted Price']],
+      body: chartRows,
+      styles: { fontSize: 7, cellPadding: 1.8, textColor: C.primary, fillColor: C.surface, lineColor: C.elevated, lineWidth: 0.3 },
+      headStyles: { fillColor: C.elevated, textColor: C.green, fontStyle: 'bold', fontSize: 7.5 },
+      alternateRowStyles: { fillColor: [15, 22, 35] },
+    });
+    curY = doc.lastAutoTable.finalY + 6;
+  }
+
+  // ─── 5. FOOTER ON ALL PAGES ──────────────────────────────────────────────
+  const totalPages = doc.internal.getNumberOfPages();
+  for (let i = 1; i <= totalPages; i++) {
+    doc.setPage(i);
+    const fY = pageH - 10;
+    setColor(doc, C.elevated, 'fill');
+    doc.rect(0, fY - 3, pageW, 0.5, 'F');
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(6.5);
+    setColor(doc, C.muted);
+    doc.text(`ASCA AI Advisory Dossier · ${centreLabel} · Official Department of Agriculture Validated Standards`, mL, fY + 1);
+    doc.text(`Page ${i} of ${totalPages}`, pageW - mR, fY + 1, { align: 'right' });
+    doc.text(`Generated: ${nowFormatted()} · Ref: ${docId}`, mL, fY + 5);
+  }
+
+  // ─── 6. TRIGGER DOWNLOAD ─────────────────────────────────────────────────
+  const safeName = advisoryTitle.replace(/[^a-zA-Z0-9]/g, '_').slice(0, 32);
+  doc.save(`ASCA_Advisory_${safeName}_${centre}.pdf`);
+}
+
+
+
+

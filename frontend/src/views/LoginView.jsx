@@ -16,7 +16,11 @@ export default function LoginView() {
       return;
     }
     const result = await login(email.trim(), password);
-    if (!result.success) setLocalErr(result.error || 'Login failed.');
+    if (result.success) {
+      window.location.href = '/';
+    } else {
+      setLocalErr(result.error || 'Login failed.');
+    }
   };
 
   const displayError = localErr || error;

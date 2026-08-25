@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { id: 'chat', label: '💬  AI Advisory Chat', badge: null },
   { id: 'analytics', label: '📈  Price Forecast Curves', badge: null },
   { id: 'b2b', label: '🤝  B2B Match Directory', badge: '6' },
+  { id: 'cultivation', label: '🌱  Crop & Agronomy Planner', badge: null },
   { id: 'blueprints', label: '📄  Executive Blueprints', badge: null },
   { id: 'settings', label: '⚙️  System Settings', badge: null },
 ];

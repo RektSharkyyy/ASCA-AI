@@ -164,3 +164,22 @@ export const seedBaseline = (days = 60) =>
     body: JSON.stringify({ days }),
   });
 
+// --------------------------------------------------------------------------- //
+// Cultivation & Agronomy Planner
+// --------------------------------------------------------------------------- //
+
+/** List all crops and their agronomic profiles. */
+export const getCultivationCrops = () => request('/cultivation/crops');
+
+/** Get AI-ranked crop recommendations for given farm parameters. */
+export const getCropRecommendations = (params) =>
+  request('/cultivation/recommend', {
+    method: 'POST',
+    body: JSON.stringify(params),
+  });
+
+/** Get the full step-by-step cultivation guide for a specific crop. */
+export const getCultivationGuide = (cropId) =>
+  request(`/cultivation/guide/${cropId}`);
+
+

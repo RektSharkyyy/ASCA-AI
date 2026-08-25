@@ -66,9 +66,7 @@ export function AuthProvider({ children }) {
     localStorage.removeItem(USER_KEY);
     setUser(null);
     setError(null);
-    // Replace the current history entry so the browser back button
-    // cannot navigate back to the authenticated dashboard
-    window.history.replaceState(null, '', window.location.href);
+    window.location.href = '/';
   }, []);
 
   // -------------------------------------------------------------------------

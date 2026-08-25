@@ -8,8 +8,11 @@ GET  /api/meta           — Bootstrap payload (centres + crops)
 POST /api/chat           — Conversational AI (full agent pipeline)
 GET  /api/market/forecast — Prophet 14-day price curve
 GET  /api/market/insights — Parallel market basket scan
-GET  /api/b2b/buyers     — Registered buyer registry
-POST /api/b2b/match      — FEFO-ranked surplus matching
+GET  /api/b2b/buyers          — Registered buyer registry
+POST /api/b2b/match           — FEFO-ranked surplus matching
+GET  /api/cultivation/crops   — DOA crop agronomic profiles
+POST /api/cultivation/recommend — AI-ranked crop recommendations
+GET  /api/cultivation/guide/{id} — Full cultivation guide & agronomy
 """
 
 from fastapi import FastAPI
@@ -19,6 +22,7 @@ from src.api.routes import chat as chat_router
 from src.api.routes import market as market_router
 from src.api.routes import b2b as b2b_router
 from src.api.routes import auth as auth_router
+from src.api.routes import cultivation as cultivation_router
 from src.api.schemas import (
     CropOption,
     EconomicCentre,
@@ -67,10 +71,11 @@ app.add_middleware(
 # --------------------------------------------------------------------------- #
 # Routers
 # --------------------------------------------------------------------------- #
-app.include_router(auth_router.router)     # /api/auth/*  — public
-app.include_router(chat_router.router)     # /api/chat    — JWT protected
-app.include_router(market_router.router)   # /api/market/ — JWT protected
-app.include_router(b2b_router.router)      # /api/b2b/    — JWT protected
+app.include_router(auth_router.router)          # /api/auth/*         — public
+app.include_router(chat_router.router)          # /api/chat           — JWT protected
+app.include_router(market_router.router)        # /api/market/        — JWT protected
+app.include_router(b2b_router.router)           # /api/b2b/           — JWT protected
+app.include_router(cultivation_router.router)   # /api/cultivation/   — JWT protected
 
 
 # --------------------------------------------------------------------------- #

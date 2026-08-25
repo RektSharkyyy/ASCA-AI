@@ -6,6 +6,7 @@ import AnalyticsView from './views/AnalyticsView';
 import B2BView from './views/B2BView';
 import BlueprintsView from './views/BlueprintsView';
 import SettingsView from './views/SettingsView';
+import CultivationView from './views/CultivationView';
 import RightPanel from './components/RightPanel';
 import LoginView from './views/LoginView';
 import { useAuth } from './auth/AuthContext';
@@ -54,10 +55,11 @@ export default function App() {
 
   const renderView = () => {
     switch (activeView) {
-      case 'analytics':  return <AnalyticsView  activeCenter={activeCenter} />;
-      case 'b2b':        return <B2BView />;
-      case 'blueprints': return <BlueprintsView />;
-      case 'settings':   return <SettingsView />;
+      case 'analytics':   return <AnalyticsView   activeCenter={activeCenter} />;
+      case 'b2b':         return <B2BView          activeCenter={activeCenter} />;
+      case 'blueprints':  return <BlueprintsView />;
+      case 'cultivation': return <CultivationView  activeCenter={activeCenter} />;
+      case 'settings':    return <SettingsView />;
       default:           return (
         <ChatContainer
           activeCenter={activeCenter}

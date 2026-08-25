@@ -6,6 +6,7 @@ import {
   ResponsiveContainer, AreaChart, Area, XAxis, YAxis,
   Tooltip, CartesianGrid
 } from 'recharts';
+import { generateChatAdvisoryPDF } from '../../utils/pdfGenerator';
 
 function InlineChart({ data, cropName }) {
   if (!data) return null;
@@ -43,8 +44,16 @@ function InlineChart({ data, cropName }) {
   );
 }
 
-export default function MessageBubble({ msg, onAction }) {
+export default function MessageBubble({ msg, onAction, activeCenter }) {
   const isUser = msg.role === 'user';
+
+  const handleActionClick = (a) => {
+    if (a.icon === 'pdf' || (a.label && (a.label.includes('Blueprint') || a.label.includes('PDF')))) {
+      generateChatAdvisoryPDF(msg, { activeCenter, title: a.label });
+    } else if (onAction && a.prompt) {
+      onAction(a.prompt);
+    }
+  };
 
   return (
     <div className={`message-row ${isUser ? 'user' : 'agent'} fade-in`}>
@@ -81,13 +90,14 @@ export default function MessageBubble({ msg, onAction }) {
               <button
                 key={i}
                 className={`action-btn ${a.primary ? 'primary' : ''}`}
-                onClick={() => onAction && a.prompt && onAction(a.prompt)}
+                onClick={() => handleActionClick(a)}
+                title={a.icon === 'pdf' ? 'Download this advisory as a PDF dossier' : ''}
               >
                 {a.icon === 'pdf'   && <FileDown size={12} />}
                 {a.icon === 'sms'   && <Radio size={12} />}
                 {a.icon === 'chart' && <TrendingUp size={12} />}
                 {a.icon === 'ext'   && <ExternalLink size={12} />}
-                {a.label}
+                {a.icon === 'pdf' ? '📄 Download Advisory PDF' : a.label}
               </button>
             ))}
           </div>

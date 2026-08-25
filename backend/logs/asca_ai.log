@@ -1927,3 +1927,308 @@ target_centers
 2026-08-25 10:56:54.613 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
 2026-08-25 10:56:54.649 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
 2026-08-25 10:57:36.192 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 15:15:29.891 | INFO     | src.api.main:_shutdown:128 - ASCA AI FastAPI server shutting down.
+2026-08-25 15:15:38.488 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 15:16:01.440 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 15:16:18.818 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:44:08.189 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:46:25.762 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:46:26.100 | ERROR    | src.infrastructure.db:init_db:28 - Database init warning (will retry on query): [Errno 101] Network is unreachable
+2026-08-25 18:46:26.100 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 18:47:51.094 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:47:51.805 | ERROR    | src.infrastructure.db:init_db:28 - Database init warning (will retry on query): [Errno 101] Network is unreachable
+2026-08-25 18:47:51.805 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 18:54:32.887 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 18:54:38.282 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:54:40.103 | ERROR    | src.infrastructure.db:init_db:48 - Database init error: [Errno 101] Network is unreachable
+2026-08-25 18:54:40.104 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 18:54:40.207 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 18:54:45.478 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:54:45.485 | ERROR    | src.infrastructure.db:init_db:48 - Database init error: [Errno 101] Network is unreachable
+2026-08-25 18:54:45.486 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 18:55:24.090 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 18:55:27.951 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 18:55:28.376 | INFO     | src.infrastructure.db:init_db:46 - Default admin user created: admin@asca.ai / Admin@123
+2026-08-25 18:55:28.376 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 18:55:57.264 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 18:56:10.856 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 18:56:10.877 | INFO     | src.api.routes.market:seed_baseline:151 - [market/seed-baseline] admin=admin@asca.ai days=60
+2026-08-25 18:56:10.877 | INFO     | src.services.scraper_service:seed_historical_baseline:389 - [scraper] Seeding 60-day baseline (2 centres × 6 crops) from 2026-06-26 …
+2026-08-25 18:56:11.258 | INFO     | src.services.scraper_service:seed_historical_baseline:445 - [scraper] Baseline seed complete — 732 inserted, 0 existing rows preserved.
+2026-08-25 18:56:37.208 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 18:56:45.261 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-25 18:56:45.261 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-25 18:56:45.621 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-25 18:56:46.561 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=DAMBULLA crop=tomato
+2026-08-25 18:56:46.561 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-25 18:56:46.570 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-25 18:56:48.608 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=THAMBUTHTHEGAMA crop=tomato
+2026-08-25 18:56:48.609 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at THAMBUTHTHEGAMA
+2026-08-25 18:56:48.615 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.158 | INFO     | src.api.routes.b2b:list_buyers:34 - [b2b/buyers] centre=THAMBUTHTHEGAMA
+2026-08-25 18:56:49.174 | INFO     | src.api.routes.b2b:match_surplus:47 - [b2b/match] centre=THAMBUTHTHEGAMA crops=None
+2026-08-25 18:56:49.174 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for THAMBUTHTHEGAMA...
+2026-08-25 18:56:49.178 | INFO     | src.api.routes.b2b:match_surplus:47 - [b2b/match] centre=THAMBUTHTHEGAMA crops=None
+2026-08-25 18:56:49.179 | INFO     | src.agents.market_scout:scout_market_parallel_async:287 - MarketScoutAgent scouting 6 crops concurrently for THAMBUTHTHEGAMA...
+2026-08-25 18:56:49.194 | INFO     | src.api.routes.b2b:list_buyers:34 - [b2b/buyers] centre=THAMBUTHTHEGAMA
+2026-08-25 18:56:49.213 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.216 | INFO     | src.api.routes.market:get_forecast:51 - [market/forecast] centre=THAMBUTHTHEGAMA crop=tomato
+2026-08-25 18:56:49.217 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at THAMBUTHTHEGAMA
+2026-08-25 18:56:49.270 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.293 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for carrot @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.340 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for beans @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.376 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for eggplant @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.391 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for eggplant @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.461 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.513 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for carrot @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:49.538 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for beans @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:50.054 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for cabbage @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:50.811 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for green_chilli @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:50.905 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for cabbage @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:51.018 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for green_chilli @ THAMBUTHTHEGAMA (source=supabase)
+2026-08-25 18:56:51.556 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for THAMBUTHTHEGAMA: Detected 0 surplus anomalies.
+2026-08-25 18:56:51.557 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-25 18:56:51.557 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for THAMBUTHTHEGAMA
+2026-08-25 18:56:51.575 | INFO     | src.agents.market_scout:scout_market_parallel_async:300 - MarketScoutAgent completed scouting for THAMBUTHTHEGAMA: Detected 0 surplus anomalies.
+2026-08-25 18:56:51.575 | INFO     | src.agents.matcher:match_surplus_crops_async:91 - DemandSupplyMatcherAgent: No surplus anomalies detected to match.
+2026-08-25 18:56:51.575 | INFO     | src.services.b2b_service:match_surplus:72 - B2BService produced 0 matches for THAMBUTHTHEGAMA
+2026-08-25 18:56:53.874 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Maha soil=Reddish Brown Earth water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:56:59.054 | INFO     | src.api.routes.cultivation:get_cultivation_guide:90 - [cultivation/guide] crop_id=green_chilli
+2026-08-25 18:57:21.211 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Reddish Brown Earth water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:21.850 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Reddish Brown Earth water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:23.775 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:25.600 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Clay Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:29.315 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Alluvial water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:32.054 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:33.559 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:33.731 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:33.922 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:34.106 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:34.265 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:34.413 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:34.562 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Sandy Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:36.751 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Yala soil=Clay Loam water=Agrowell / Tube Well acres=1.0
+2026-08-25 18:57:41.704 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Maha soil=Clay Loam water=Agrowell / Tube Well acres=20.0
+2026-08-25 18:57:42.304 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Maha soil=Clay Loam water=Agrowell / Tube Well acres=20.0
+2026-08-25 18:57:45.824 | INFO     | src.api.routes.cultivation:recommend_crops:58 - [cultivation/recommend] centre=THAMBUTHTHEGAMA season=Maha soil=Clay Loam water=Rainfed acres=0.25
+2026-08-25 18:57:48.904 | INFO     | src.api.routes.cultivation:get_cultivation_guide:90 - [cultivation/guide] crop_id=green_chilli
+2026-08-25 19:05:00.427 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:05:12.010 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:05:12.027 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:05:12.078 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:05:34.734 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:05:40.447 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:05:40.454 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:05:40.470 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:05:57.549 | INFO     | src.agents.rag_agent:handle_query_async:104 - [MarketRAGAgent] query='what can I grow for the next 6 months in Dambulla?' detected centre=DAMBULLA crop=None
+2026-08-25 19:05:57.551 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:05:59.871 | INFO     | src.agents.rag_agent:_lazy_load_llm:78 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:06:05.559 | WARNING  | src.agents.rag_agent:_handle_cultivation_query_async:379 - [rag_agent] Cultivation recs LLM call timed out (). Using instant deterministic response.
+2026-08-25 19:06:05.559 | INFO     | src.agents.rag_agent:handle_query_async:104 - [MarketRAGAgent] query='what fertilizer and pest controls should I use for tomato?' detected centre=DAMBULLA crop=tomato
+2026-08-25 19:06:13.568 | WARNING  | src.agents.rag_agent:_handle_cultivation_query_async:329 - [rag_agent] Cultivation LLM call timed out (). Using instant deterministic response.
+2026-08-25 19:09:39.576 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 19:09:39.577 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka agriculture Department of Agriculture Maha crop cultivation recommendations 2026' (depth=basic, max_results=3)
+2026-08-25 19:09:42.392 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 19:10:29.616 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 19:10:29.616 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka agriculture Department of Agriculture crop cultivation recommendation Maha season 2026' (depth=basic, max_results=2)
+2026-08-25 19:10:34.441 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 2 results
+2026-08-25 19:10:34.441 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:13:21.609 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:13:26.853 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:13:26.859 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:13:26.871 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:15:16.413 | INFO     | src.agents.rag_agent:handle_query_async:104 - [MarketRAGAgent] query='what can I grow for the next 6 months in Dambulla?' detected centre=DAMBULLA crop=None
+2026-08-25 19:15:16.421 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 19:15:16.421 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture Maha season crop cultivation recommendations DAMBULLA 2026' (depth=basic, max_results=3)
+2026-08-25 19:15:22.256 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 19:15:22.256 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:15:22.771 | INFO     | src.agents.rag_agent:_lazy_load_llm:78 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:15:40.274 | WARNING  | src.agents.rag_agent:_handle_cultivation_query_async:406 - [rag_agent] Cultivation recs LLM call timed out (). Using fallback.
+2026-08-25 19:16:59.457 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:17:04.327 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:17:04.333 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:17:04.346 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:17:40.348 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:17:44.872 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:17:44.876 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:17:44.889 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:17:44.990 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:17:48.930 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:17:48.936 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:17:48.949 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:20:03.180 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:20:07.403 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:20:07.407 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:20:07.419 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:20:07.520 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 19:20:11.490 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:20:11.494 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:20:11.506 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:21:17.637 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 19:21:17.642 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 19:21:17.653 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 19:22:39.743 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 19:22:39.762 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=aeb34726-09f1-413e-adf4-ebeebcfcb8b3 centre=DAMBULLA message='What can I grow for the next 6 months in Dambulla?'
+2026-08-25 19:22:39.762 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:22:40.087 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:22:47.104 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-25 19:22:47.104 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 1 internal-domain signal(s))
+2026-08-25 19:22:47.105 | INFO     | src.agents.rag_agent:handle_query_async:104 - [MarketRAGAgent] query='What can I grow for the next 6 months in Dambulla?' detected centre=DAMBULLA crop=None
+2026-08-25 19:22:47.107 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 19:22:47.108 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture Maha season crop cultivation recommendations DAMBULLA 2026' (depth=basic, max_results=3)
+2026-08-25 19:22:52.850 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 19:22:52.850 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:22:52.851 | INFO     | src.agents.rag_agent:_lazy_load_llm:78 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 19:22:58.449 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=1 for user=1
+2026-08-25 19:26:42.212 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 19:26:42.224 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=48f025cb-699b-433e-82f0-bf8a122f21d9 centre=DAMBULLA message='What can I grow for the next 6 months in Dambulla?'
+2026-08-25 19:26:45.024 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-25 19:26:45.024 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 1 internal-domain signal(s))
+2026-08-25 19:26:45.025 | INFO     | src.agents.rag_agent:handle_query_async:104 - [MarketRAGAgent] query='What can I grow for the next 6 months in Dambulla?' detected centre=DAMBULLA crop=None
+2026-08-25 19:26:45.025 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 19:26:45.025 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture Maha season crop cultivation recommendations DAMBULLA 2026' (depth=basic, max_results=3)
+2026-08-25 19:26:46.241 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 19:27:09.600 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=2 for user=1
+2026-08-25 19:32:02.546 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 19:32:02.549 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 19:32:02.553 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 19:32:02.558 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 19:32:07.628 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 23:00:05.961 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 23:00:05.966 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 23:00:05.986 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 23:00:05.990 | WARNING  | src.auth.dependencies:get_current_user:45 - [auth] JWT decode error: Signature has expired.
+2026-08-25 23:00:11.474 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 23:00:34.882 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=31334f6d-b987-4958-bc8a-6b756ade6072 centre=DAMBULLA message='hello'
+2026-08-25 23:00:34.882 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-25 23:00:34.883 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-25 23:00:34.883 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-25 23:00:34.884 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:00:34.887 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:00:37.371 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=3 for user=1
+2026-08-25 23:01:13.217 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=31334f6d-b987-4958-bc8a-6b756ade6072 centre=DAMBULLA message='hi'
+2026-08-25 23:01:13.218 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-25 23:01:13.218 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-25 23:01:13.219 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-25 23:01:15.030 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=4 for user=1
+2026-08-25 23:02:26.609 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 23:02:39.673 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:02:39.693 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:02:39.734 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:03:05.813 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 23:03:19.158 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:03:19.179 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:03:19.229 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:03:34.679 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 23:03:48.318 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:03:48.334 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:03:48.375 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:03:48.478 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 23:04:02.987 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:04:03.003 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:04:03.049 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:19:07.254 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:19:07.271 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:19:07.310 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:19:18.375 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 23:19:18.400 | INFO     | src.api.routes.cultivation:list_crops:44 - [cultivation/crops] listing all crop profiles
+2026-08-25 23:19:27.711 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 23:19:27.737 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=8358b640-e3a3-4803-a660-d8f76769c08b centre=DAMBULLA message='What crops should I grow for the next 6 months in Dambulla?'
+2026-08-25 23:19:27.738 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:19:28.897 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:19:37.836 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-25 23:19:37.837 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 1 internal-domain signal(s))
+2026-08-25 23:19:37.838 | INFO     | src.agents.rag_agent:handle_query_async:107 - [MarketRAGAgent] query='What crops should I grow for the next 6 months in Dambulla?' detected centre=DAMBULLA crop=None
+2026-08-25 23:19:37.848 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 23:19:37.849 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture Maha season crop cultivation recommendations DAMBULLA 2026' (depth=basic, max_results=3)
+2026-08-25 23:19:40.415 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 23:19:40.417 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:19:40.419 | INFO     | src.agents.rag_agent:_lazy_load_llm:76 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:20:04.126 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 23:20:04.151 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=e5716ca8-7f88-4f7a-acc1-99ef86fae300 centre=DAMBULLA message='What are the best crops to grow next 6 months?'
+2026-08-25 23:20:22.964 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-25 23:20:22.964 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:20:22.967 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:20:26.183 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-25 23:20:26.183 | INFO     | src.agents.rag_agent:handle_query_async:107 - [MarketRAGAgent] query='What are the best crops to grow next 6 months?' detected centre=DAMBULLA crop=None
+2026-08-25 23:20:26.185 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 23:20:26.186 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture Maha season crop cultivation recommendations DAMBULLA 2026' (depth=basic, max_results=3)
+2026-08-25 23:20:26.263 | WARNING  | src.agents.rag_agent:_handle_cultivation_query_async:404 - [rag_agent] Cultivation recs LLM call timed out (). Using fallback.
+2026-08-25 23:20:26.525 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=5 for user=1
+2026-08-25 23:20:32.236 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 23:20:57.237 | WARNING  | src.agents.rag_agent:_handle_cultivation_query_async:404 - [rag_agent] Cultivation recs LLM call timed out (). Using fallback.
+2026-08-25 23:20:57.455 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=6 for user=1
+2026-08-25 23:22:55.317 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=ec777d26-1a51-44af-b065-d3538e4a0b21 centre=DAMBULLA message='hello'
+2026-08-25 23:22:55.317 | INFO     | src.agents.intent_guardrail:_fast_keyword_check:125 - Fast keyword match: IN_SCOPE (greeting/pleasantry)
+2026-08-25 23:22:55.318 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: direct (Exact greeting match)
+2026-08-25 23:22:55.319 | INFO     | src.agents.direct_agent:handle_direct:120 - DirectAgent route=direct (skipping web search entirely)
+2026-08-25 23:22:55.321 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:22:55.323 | INFO     | src.agents.direct_agent:_lazy_load_llm:97 - DirectAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:22:59.297 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=7 for user=1
+2026-08-25 23:23:17.123 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=ec777d26-1a51-44af-b065-d3538e4a0b21 centre=DAMBULLA message='what fertilaizer that can i use for tomato'
+2026-08-25 23:23:21.983 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-25 23:23:24.301 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-25 23:23:24.302 | INFO     | src.agents.rag_agent:handle_query_async:107 - [MarketRAGAgent] query='what fertilaizer that can i use for tomato' detected centre=DAMBULLA crop=tomato
+2026-08-25 23:23:24.334 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-25 23:23:51.588 | WARNING  | src.agents.rag_agent:_handle_single_crop_query_async:207 - [rag_agent] LLM call timed out or failed (). Using instant deterministic response.
+2026-08-25 23:23:51.589 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-25 23:23:51.614 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-25 23:23:54.265 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=8 for user=1
+2026-08-25 23:26:28.545 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 23:26:41.789 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:26:41.810 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:26:41.854 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:26:48.576 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-25 23:27:10.152 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-25 23:27:10.168 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-25 23:27:10.210 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-25 23:27:18.947 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-25 23:27:18.963 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=8d2526ed-5a72-4ff3-b79e-4c4045a8bf05 centre=DAMBULLA message='what fertilaizer that can i use for tomato'
+2026-08-25 23:27:18.985 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:27:20.186 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:27:21.839 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.80)
+2026-08-25 23:27:21.839 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:27:21.842 | INFO     | src.agents.router:_lazy_load_llm:134 - QueryRouter loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:27:22.050 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-25 23:27:22.051 | INFO     | src.agents.rag_agent:handle_query_async:107 - [MarketRAGAgent] query='what fertilaizer that can i use for tomato' detected centre=DAMBULLA crop=tomato
+2026-08-25 23:27:22.060 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 23:27:22.061 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture tomato fertilizer dosage schedule basal top dressing DOA' (depth=basic, max_results=3)
+2026-08-25 23:27:25.008 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 23:27:25.010 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:27:25.012 | INFO     | src.agents.rag_agent:_lazy_load_llm:76 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-25 23:27:25.932 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-25 23:27:25.968 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-25 23:27:28.791 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=9 for user=1
+2026-08-25 23:27:56.072 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=ec777d26-1a51-44af-b065-d3538e4a0b21 centre=DAMBULLA message='what fertilaizer that can i use for tomato'
+2026-08-25 23:27:58.999 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.90)
+2026-08-25 23:28:01.224 | INFO     | src.agents.router:_llm_route:172 - QueryRouter LLM verdict: rag (0.80)
+2026-08-25 23:28:01.225 | INFO     | src.agents.rag_agent:handle_query_async:107 - [MarketRAGAgent] query='what fertilaizer that can i use for tomato' detected centre=DAMBULLA crop=tomato
+2026-08-25 23:28:01.226 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-25 23:28:01.227 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture tomato fertilizer dosage schedule basal top dressing DOA' (depth=basic, max_results=3)
+2026-08-25 23:28:02.482 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-25 23:28:27.371 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-25 23:28:27.393 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-25 23:28:30.144 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=10 for user=1
+2026-08-26 00:17:28.684 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-26 00:17:43.528 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-26 00:17:43.544 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-26 00:17:43.593 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-26 00:17:47.908 | INFO     | src.api.main:_shutdown:133 - ASCA AI FastAPI server shutting down.
+2026-08-26 00:18:12.651 | INFO     | src.infrastructure.db:init_db:22 - Initializing Database Tables...
+2026-08-26 00:18:12.668 | INFO     | src.infrastructure.db:init_db:26 - Database Tables Initialized successfully.
+2026-08-26 00:18:12.728 | INFO     | src.api.main:_startup:128 - ASCA AI FastAPI server started — all agents ready.
+2026-08-26 00:18:23.188 | INFO     | src.api.routes.auth:login:106 - [auth] Login successful: admin@asca.ai
+2026-08-26 00:18:23.215 | INFO     | src.api.routes.chat:chat:120 - [chat] user=1 session=5d4152ed-8df5-479e-b754-17b1d4a73535 centre=DAMBULLA message='how much fertilizer do I need for 2.5 acres of tomato in Dambulla?'
+2026-08-26 00:18:23.216 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-26 00:18:24.416 | INFO     | src.agents.intent_guardrail:_lazy_load_llm:109 - Domain Guardrail loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-26 00:18:28.244 | INFO     | src.agents.intent_guardrail:_classify_with_llm:207 - LLM classified query as in_scope (confidence=0.95)
+2026-08-26 00:18:28.245 | INFO     | src.agents.router:route:193 - QueryRouter heuristic verdict: rag (Matched 1 internal-domain signal(s))
+2026-08-26 00:18:28.245 | INFO     | src.agents.rag_agent:handle_query_async:243 - [MarketRAGAgent] query='how much fertilizer do I need for 2.5 acres of tomato in Dam' detected centre=DAMBULLA crop=tomato
+2026-08-26 00:18:28.256 | INFO     | src.agents.tools.web_search_tool:_lazy_load_client:59 - Tavily Search Tool initialized successfully
+2026-08-26 00:18:28.256 | INFO     | src.agents.tools.web_search_tool:search:103 - Performing Tavily search: 'Sri Lanka Department of Agriculture tomato fertilizer dosage schedule basal top dressing DOA' (depth=basic, max_results=3)
+2026-08-26 00:18:30.632 | INFO     | src.agents.tools.web_search_tool:search:124 - Tavily search returned 3 results
+2026-08-26 00:18:30.634 | INFO     | src.infrastructure.llm_loader:get_llm:16 - Loading OpenRouter LLM: meta-llama/llama-3.1-8b-instruct
+2026-08-26 00:18:30.636 | INFO     | src.agents.rag_agent:_lazy_load_llm:212 - MarketRAGAgent loaded LLM: openrouter/meta-llama/llama-3.1-8b-instruct
+2026-08-26 00:18:34.772 | INFO     | src.services.market_service:get_forecast:91 - MarketService building forecast curve for tomato at DAMBULLA
+2026-08-26 00:18:34.835 | INFO     | src.agents.market_scout:fetch_historical_data_async:126 - [market_scout] Loaded 60 daily rows from market_data for tomato @ DAMBULLA (source=supabase)
+2026-08-26 00:18:37.285 | INFO     | src.api.routes.chat:chat:167 - [chat] saved history record id=11 for user=1

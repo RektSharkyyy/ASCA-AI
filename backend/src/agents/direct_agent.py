@@ -32,7 +32,7 @@ DIRECT_INSTRUCTIONS = (
     "The user sent a greeting, pleasantry or light chitchat. Reply in ONE or TWO short, "
     "friendly sentences. Do not fabricate market data. If helpful, briefly mention that you "
     "can assist with crop price forecasts, surplus alerts, B2B buyer matching, invoices and "
-    "financial reports. Mirror the user's language (English or Sinhala)."
+    "financial reports. Communicate strictly in clear, professional English only."
 )
 
 WEB_SEARCH_INSTRUCTIONS = (
