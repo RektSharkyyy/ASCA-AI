@@ -60,9 +60,19 @@ class ExecutiveBlueprintModel(Base):
     __tablename__ = "executive_blueprints"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    title = Column(String(200), nullable=False)
     created_at = Column(DateTime, default=datetime.utcnow, index=True)
+    date = Column(String(50), nullable=False) # e.g. "2026-08-26"
+    center = Column(String(50), nullable=False) # "Dambulla" or "Thambuththegama"
+    crop_name = Column(String(100), nullable=True)
+    crop_count = Column(Integer, default=1)
+    status = Column(String(50), default="Final") # Final | Draft
+    risk_level = Column(String(50), default="MEDIUM") # CRITICAL | HIGH | MEDIUM | LOW
+    summary = Column(Text, nullable=False)
     forecast_horizon_days = Column(Integer, default=14)
-    summary_text = Column(Text, nullable=False)
+    forecast_data_json = Column(Text, nullable=True) # JSON list of {crop, current, day7, day14, trend}
+    quota_data_json = Column(Text, nullable=True) # JSON list of {buyer, quota, price, location, fefo}
+    directives_json = Column(Text, nullable=True) # JSON list of {done, text}
     pydantic_validated = Column(Boolean, default=True)
     confidence_score = Column(Float, default=1.0)
     telegram_broadcast_status = Column(String(50), default="PENDING")

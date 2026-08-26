@@ -182,4 +182,23 @@ export const getCropRecommendations = (params) =>
 export const getCultivationGuide = (cropId) =>
   request(`/cultivation/guide/${cropId}`);
 
+// --------------------------------------------------------------------------- //
+// Executive Blueprints
+// --------------------------------------------------------------------------- //
+
+/** List all executive advisory blueprints. */
+export const getBlueprints = () => request('/blueprints');
+
+/** Dynamically generate a new Pydantic-validated executive blueprint. */
+export const generateBlueprint = (payload) =>
+  request('/blueprints/generate', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  });
+
+/** Retrieve full dossier for a specific blueprint. */
+export const getBlueprintById = (blueprintId) =>
+  request(`/blueprints/${blueprintId}`);
+
+
 

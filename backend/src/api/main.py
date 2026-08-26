@@ -23,6 +23,7 @@ from src.api.routes import market as market_router
 from src.api.routes import b2b as b2b_router
 from src.api.routes import auth as auth_router
 from src.api.routes import cultivation as cultivation_router
+from src.api.routes import blueprints as blueprints_router
 from src.api.schemas import (
     CropOption,
     EconomicCentre,
@@ -76,6 +77,7 @@ app.include_router(chat_router.router)          # /api/chat           — JWT pr
 app.include_router(market_router.router)        # /api/market/        — JWT protected
 app.include_router(b2b_router.router)           # /api/b2b/           — JWT protected
 app.include_router(cultivation_router.router)   # /api/cultivation/   — JWT protected
+app.include_router(blueprints_router.router)    # /api/blueprints     — JWT protected
 
 
 # --------------------------------------------------------------------------- #

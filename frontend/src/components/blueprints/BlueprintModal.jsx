@@ -69,12 +69,16 @@ function TrendIcon({ value }) {
 export default function BlueprintModal({ blueprint, onClose }) {
   const [generating, setGenerating] = useState(false);
 
-  if (!blueprint) return null;
-
   const risk     = RISK_CONFIG[blueprint.riskLevel] || { label: blueprint.riskLevel, cls: 'muted' };
-  const forecast = FORECAST_DATA[blueprint.id] || FORECAST_DATA[1];
-  const quotas   = QUOTA_DATA[blueprint.id]    || QUOTA_DATA[1];
-  const directives = DIRECTIVES[blueprint.id]  || DIRECTIVES[1];
+  const forecast = (blueprint.forecastData && blueprint.forecastData.length > 0)
+    ? blueprint.forecastData
+    : (FORECAST_DATA[blueprint.id] || FORECAST_DATA[1]);
+  const quotas   = (blueprint.quotaData && blueprint.quotaData.length > 0)
+    ? blueprint.quotaData
+    : (QUOTA_DATA[blueprint.id] || QUOTA_DATA[1]);
+  const directives = (blueprint.directives && blueprint.directives.length > 0)
+    ? blueprint.directives
+    : (DIRECTIVES[blueprint.id] || DIRECTIVES[1]);
 
   const handleDownloadPDF = () => {
     setGenerating(true);
