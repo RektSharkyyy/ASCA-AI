@@ -1,0 +1,62 @@
+# =============================================================================
+# ASCA AI — Multi-Container Docker Compose Orchestration
+# =============================================================================
+
+services:
+  # ─── FastAPI Core Backend & Multi-Agent Pipeline ─────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: asca-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - DATABASE_URL=sqlite+aiosqlite:///./data/asca.db
+      - CHROMA_DB_DIR=./data/chroma_db
+    env_file:
+      - ./backend/.env
+    volumes:
+      - asca_backend_data:/app/data
+      - asca_backend_logs:/app/logs
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    networks:
+      - asca-net
+
+  # ─── React (Vite) Production Frontend with Nginx ─────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: asca-frontend
+    restart: unless-stopped
+    ports:
+      - "5173:80"
+      - "80:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - asca-net
+
+# ─── Persistent Storage Volumes ─────────────────────────────────────────────
+volumes:
+  asca_backend_data:
+    name: asca_backend_data
+  asca_backend_logs:
+    name: asca_backend_logs
+
+# ─── Isolated Network ───────────────────────────────────────────────────────
+networks:
+  asca-net:
+    name: asca-net
+    driver: bridge

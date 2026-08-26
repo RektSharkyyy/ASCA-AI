@@ -1,0 +1,18 @@
+# Root .dockerignore
+Assigment/
+Assignment/
+assignment/
+assigment/
+.git/
+.github/
+.venv/
+venv/
+node_modules/
+dist/
+*.log
+*.db
+*.sqlite3
+.pytest_cache/
+.coverage
+.ipynb_checkpoints/
+.DS_Store
